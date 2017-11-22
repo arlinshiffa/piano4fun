@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../lib/w3.js"></script>
+    <link rel="stylesheet" href="../lib/w3.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="w3-display-container">
+        <canvas class="w3-display-middle" id="canvas"></canvas>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        var canvas = $("#canvas");
+        var ctx = canvas.get(0).getContext("2d");
+        canvas.attr("width", $(window).get(0).innerWidth - 200);
+        canvas.attr("height", 300);
+    });
+</script>
+
+</html>
