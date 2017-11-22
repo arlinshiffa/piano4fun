@@ -19,6 +19,14 @@
         var ctx = canvas.get(0).getContext("2d");
         canvas.attr("width", $(window).get(0).innerWidth - 200);
         canvas.attr("height", 300);
+        var img = new Image();
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0);
+            ctx.fillStyle = "rgba(200, 0, 0, 0.5)";
+            ctx.fillRect(0, 0, 500, 500);
+        }
+
+        img.src = '../img/musical-notes.png';
     });
 </script>
 
