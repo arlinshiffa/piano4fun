@@ -11,25 +11,42 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
 <body class="">
+    <!--menu-->
     <div class="w3-display-topright w3-padding">
             <button class="buttonRed buttonMiddle">about us</button>
             <button class="buttonGreen buttonMiddle">contact us</button>
      </div>
-      
-    <div class="title" >
-           
-            <div  class="w3-half logo"  data-aos-anchor="#example-anchor" data-aos="flip-up"style="padding-right:2%;"><a class="w3-hover-opacity" href=""><center><img src="img/logo.png" alt="" width="340px" ></center></a><br><br><button class="buttonBlue buttonLarge" style="margin-left:150px">SIGN IN</button><br><br></div>
-            <div class="w3-half" style="text-align:justify;"  >
-                    <div class="w3-half" style="text-align:justify;margin-right:100px;" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam vero adipisci reprehenderit veniam mollitia
-                <br><br>
-                <a href=""><i class="fa fa-instagram fa-2x" style="margin-right:20px;"></i></a>      <a href=""><i class="fa fa-facebook fa-2x" style="padding-right:20px;"></i></a>        <a href=""><i class="fa fa-twitter fa-2x"></i></a>
-              
-            </div>
-            
-           
+    
+     <!--title-->
+    <div class="title" >     
+        <div  class="w3-half logo w3-container"  data-aos-anchor="#example-anchor" data-aos="flip-up"style="padding-right:1%;"><a class="w3-hover-opacity" href=""><center><img src="img/logo.png" alt="" width="340px" >
+        </center></a><br><br><button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button><br><br></div>
+        <div class="w3-half w3-container" style="text-align:justify;padding-right:10%" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam vero adipisci reprehenderit veniam mollitia
+            <br><br>
+            <a href=""><i class="fa fa-instagram fa-2x" style="margin-right:20px;"></i></a>      <a href=""><i class="fa fa-facebook fa-2x" style="padding-right:20px;"></i></a>        <a href=""><i class="fa fa-twitter fa-2x"></i></a>
+        </div>     
     </div>
     
+    <!--modal-->
+    <div id="signin" class="w3-modal" >
+            <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
+                    <div class="w3-container modalContainer " align="center">
+                    <span onclick="document.getElementById('signin').style.display='none'" 
+                    class="w3-button w3-display-topright"><i class="fa fa-times-circle fa-2x"></i></span>
+                    <h2><B>SIGN IN</B></h2>
+    
+                    <input class="w3-input w3-animate-input w3-border" style="width:50%" type="text" name="username" placeholder="username">
+                    <br>
+                    <input class="w3-input w3-animate-input w3-border"style="width:50%" type="password" name="password" placeholder="password">
+                    <br>
+                    <button class="w3 buttonBlue">sign in</button>
+                    <br>
+                    <p><a href="">Forget password</a></p>
+                    </div>
+                </div>
+          </div>
+
     
 </body>
 </html>

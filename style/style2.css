@@ -85,6 +85,7 @@ button{
     box-shadow: 0 5px 0 rgb(129, 55, 33) ;
     background: rgb(252, 100, 62);
     font-weight:bold;
+    color:white;
 }
 
 .buttonOrange:hover{
