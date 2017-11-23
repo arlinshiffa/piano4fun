@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <div class="w3-sidebar  w3-card w3-bar-block" style="width:25%">
+    <!--sidebar-->
+    <div class="w3-sidebar w3-animate-left w3-bar-block " id="mySidebar" style="width:25%;display:none;z-index:5;">
         <div class="w3-container">
             <!--logo-->
             <img class="w3-padding-large" src="../img/logo.png" alt="" width="100%">
@@ -34,7 +35,7 @@
                         <span id="username">SomeOne</span>!
                     </div>
                 </div>
-             
+
                 <div class="w3-row">
                     <!--level-->
                     <div class="w3-half">
@@ -72,15 +73,30 @@
 
             </div>
 
-            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-book"></i> Sheet Music</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-envelope"></i> Send Us Feedback</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-users"></i> About Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-id-card-o"></i> Contact Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-power-off"></i> Sign Out</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-book"></i> Sheet Music</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-envelope"></i> Send Us Feedback</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-users"></i> About Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-id-card-o"></i> Contact Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-power-off"></i> Sign Out</a>
 
 
         </div>
     </div>
+
+    <!--overlay-->
+    <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer"  id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding">
+        <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+    </div>
+   
     <script> 
         function getHighScore() {
             width = document.getElementById("video").innerHTML;
@@ -88,6 +104,24 @@
             document.getElementById("videoBar").style.width = width + '%';
         }
 
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Get the modal
+        var sidebar = document.getElementById('mySideBar');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function() {
+            if (event.target == sidebar) {
+                sidebar.style.display = "none";
+            }
+        }
         getHighScore();
     </script>
 
