@@ -9,24 +9,114 @@
 </head>
 
 <body>
-    <div class="w3-display-container">
-        <canvas class="w3-display-middle" id="canvas"></canvas>
+    <div class="w3-center">
+        <canvas id="canvas"></canvas>
+        <div id="text-group">
+            <input id="inp0" type="text" class="w3-input w3-round game-input w3-border" readonly>
+            <input id="inp1" type="text" class="w3-input w3-round game-input w3-border" readonly>
+            <input id="inp2" type="text" class="w3-input w3-round game-input w3-border" readonly>
+            <input id="inp3" type="text" class="w3-input w3-round game-input w3-border" readonly>
+            <input id="inp4" type="text" class="w3-input w3-round game-input w3-border" readonly>
+            <input id="inp5" type="text" class="w3-input w3-round game-input w3-border" readonly>
+        </div>
+        <br>
+        <div>
+            <button class="w3-button w3-round game-button">A</button>
+            <button class="w3-button w3-round game-button">B</button>
+            <button class="w3-button w3-round game-button">C</button>
+            <button class="w3-button w3-round game-button">D</button>
+            <button class="w3-button w3-round game-button">E</button>
+            <button class="w3-button w3-round game-button">F</button>
+            <button class="w3-button w3-round game-button">G</button>
+        </div>
     </div>
 </body>
 <script>
     $(document).ready(function () {
+        //canvas initialization
         var canvas = $("#canvas");
         var ctx = canvas.get(0).getContext("2d");
         canvas.attr("width", $(window).get(0).innerWidth - 200);
-        canvas.attr("height", 300);
-        var img = new Image();
-        img.onload = function () {
-            ctx.drawImage(img, 0, 0);
-            ctx.fillStyle = "rgba(200, 0, 0, 0.5)";
-            ctx.fillRect(0, 0, 500, 500);
+        canvas.attr("height", 200);
+
+        //musical lines as bg initialization
+        var bg = new Image();
+        bg.onload = function () {
+            var scale = canvas.attr("width") * 0.9 / bg.width;
+            ctx.drawImage(bg, (canvas.attr("width") / 2 - bg.width * scale / 2), 0, bg.width * scale, bg.height * scale);
+        }
+        bg.src = '../img/musical-lines.png';
+
+        //spawn notes
+        var ct = 0;
+        var notes = []; //0=D,1=E,2=F,3=G,4=H,5=I,6=J
+        for (var i = 0; i < 6; i++) {
+            notes[i] = Math.floor(Math.random() * 7);
+        }
+        var hPos = [0.08, 0.073, 0.063, 0.056, 0.047, 0.088, 0.08];
+        var drawNotes = function (ct) {
+            var img2 = new Image();
+            img2.onload = function () {
+                var scale = canvas.attr("width") * 0.1 / img2.width * 0.2;
+                var canWidth = canvas.attr("width");
+                ctx.drawImage(img2, canWidth * 0.17 + (ct * canWidth * 0.1), canWidth * hPos[notes[ct]], img2.width * scale * 1.1, img2.height * scale);
+            }
+            img2.src = notes[ct] < 5 ? "../img/music-notes.png" : "../img/music-notes-2.png";
+            return img2;
+        }
+        var noteAssets = [];
+        for (var i = 0; i < 6; i++) {
+            noteAssets.push(drawNotes(ct++));
         }
 
-        img.src = '../img/musical-notes.png';
+        //game attribute
+        var cur;
+        var score;
+        var life;
+        function startGame() {
+            $("#inp0").toggleClass("w3-border-blue");
+            cur = 0;
+            score = 0;
+            life = 3;
+        }
+        startGame();
+
+        $(".game-button").on("click", function () {
+            if (isValid($(this).html())) {
+                $("#inp" + cur).val($(this).html());
+                $("#inp" + (cur++)).toggleClass("w3-border-blue");
+                $("#inp" + cur).toggleClass("w3-border-blue");
+                score += 100;
+            } else {
+                life--;
+            }
+        })
+
+        //0=D,1=E,2=F,3=G,4=A,5=B,6=C
+        function isValid(note) {
+            if (note == 'A') {
+                return notes[cur] == 4;
+            }
+            if (note == 'B') {
+                return notes[cur] == 5;
+            }
+            if (note == 'C') {
+                return notes[cur] == 6;
+            }
+            if (note == 'D') {
+                return notes[cur] == 0;
+            }
+            if (note == 'E') {
+                return notes[cur] == 1;
+            }
+            if (note == 'F') {
+                return notes[cur] == 2;
+            }
+            if (note == 'G') {
+                return notes[cur] == 3;
+            }
+        }
+
     });
 </script>
 

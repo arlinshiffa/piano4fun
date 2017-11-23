@@ -1,3 +1,14 @@
 #canvas{
+    margin-top: 100px;
+}
+
+.game-input{
+    width: 50px;
+    margin-left: 34px;
     display: inline-block;
+}
+
+#text-group{
+    text-align:left !important;
+    margin-left: 200px;
 }
