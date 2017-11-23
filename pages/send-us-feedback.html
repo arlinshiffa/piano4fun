@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
@@ -57,18 +58,39 @@
                 <span onclick="document.getElementById('modalSubmit').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <div class="w3-center">
                     <h2>Thank you for your feedback</h2>
-                    <h2><i class="fa fa-handshake-o"></i></h2>
+                    <h2>
+                        <i class="fa fa-handshake-o"></i>
+                    </h2>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="ifr" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+    
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openIfr()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openIfr()">☰</button>
+    </div>
 </body>
 
 </html>
 
 <script>
+    $(document).ready(function () {
+    })
+    function openIfr() {
+        $("#ifr").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
     function onSubmit() {
-        document.getElementById('modalSubmit').style.display='block';
+        document.getElementById('modalSubmit').style.display = 'block';
     }
 </script>

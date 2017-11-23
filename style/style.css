@@ -49,3 +49,17 @@ canvas#head{
 #modalSubmit{
     padding-top: 15%;
 }
+
+#ifr{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 25%;
+    height: 100%;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

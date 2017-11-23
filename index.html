@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="lib/w3.css">
     <link rel="stylesheet" href="style/style2.css">
     <link rel="stylesheet" href="lib/font-awesome.css">
+    <script src="lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
@@ -25,19 +26,20 @@
             <a class="w3-hover-opacity" href="">
                 <center>
                     <img src="img/logo.png" alt="" width="340px">
-                    
+
                 </center>
             </a>
             <br>
             <br>
             <div class="w3-row">
-                    <div style="" class="w3-half">
-                            <button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button>
-                    </div>
-                    <div style="" class="w3-half"> 
-                        don't have an account?<br>
-                        Just <a  onclick="document.getElementById('signup').style.display='block'" id="link" style="color:red;">sign up</a> for free
-                    </div>
+                <div style="" class="w3-half">
+                    <button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button>
+                </div>
+                <div style="" class="w3-half">
+                    don't have an account?
+                    <br> Just
+                    <a onclick="document.getElementById('signup').style.display='block'" id="link" style="color:red;">sign up</a> for free
+                </div>
             </div>
 
         </div>
@@ -69,60 +71,63 @@
                         <B>SIGN IN</B>
                     </h2>
 
-                    <input class="w3-input w3-animate-input w3-border" style="width:50%" type="text" name="username" placeholder="username">
-                    <br>
-                    <input class="w3-input w3-animate-input w3-border" style="width:50%" type="password" name="password" placeholder="password">
-                    <br>
-                    <button class="w3 buttonBlue buttonMedium">sign in</button>
-                    <br>
-                    <p>
-                        <a href="" style="color:blue;">Forgot password?</a>
-                    </p>
+                    <form action="pages/dashboard.html">
+                        <input class="w3-input w3-animate-input w3-border" style="width:50%" type="text" name="username" placeholder="username">
+                        <br>
+                        <input class="w3-input w3-animate-input w3-border" style="width:50%" type="password" name="password" placeholder="password">
+                        <br>
+                        <input type="submit" class="w3 buttonBlue buttonMedium" onclick="test()">sign in</input>
+                        <br>
+                        <p>
+                            <a href="" style="color:blue;">Forgot password?</a>
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
 
         <!--modal sign up-->
         <div id="signup" class="w3-modal">
-                <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
-                    <div class="w3-container modalContainer " >
-                        <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">
-                            <i class="fa fa-times-circle fa-2x"></i>
-                        </span>
-                        <h2>
-                            <B>Create a New Account</B>
-                        </h2>
-                        <label for="">Kid's Full Name:</label>
-                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="fullname" >
-                        <br>
-                        <label for="">Your Email:</label>
-                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="email" name="email">
-                        <br>
-                        <label for="">Username for your child:</label>
-                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="username">
-                        <br>
-                        <label for="">Password for your children:</label>
-                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="password" name="password" >
-                        <br>
-                        <label for="">Your Child's Gender:</label>
-                        <select class="w3-select w3-animate-input" name="Gender">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                              </select>
-                        <br>
-                        <br>
-                        <label for="">Your Child's Birthday:</label>
-                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="date" name="birth" >
-                        <br>
-                        <button class="w3 buttonBlue buttonMedium" style="width:100%">Create Account</button>
-                        <br>
-                        <p>
-                            *By Joining, you agree to Our <a href="" style="color:blue;">Terms of Service</a>
-                        </p>
-                    </div>
+            <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
+                <div class="w3-container modalContainer ">
+                    <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">
+                        <i class="fa fa-times-circle fa-2x"></i>
+                    </span>
+                    <h2>
+                        <B>Create a New Account</B>
+                    </h2>
+                    <label for="">Kid's Full Name:</label>
+                    <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="fullname">
+                    <br>
+                    <label for="">Your Email:</label>
+                    <input class="w3-input w3-animate-input w3-border" style="width:70%" type="email" name="email">
+                    <br>
+                    <label for="">Username for your child:</label>
+                    <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="username">
+                    <br>
+                    <label for="">Password for your children:</label>
+                    <input class="w3-input w3-animate-input w3-border" style="width:70%" type="password" name="password">
+                    <br>
+                    <label for="">Your Child's Gender:</label>
+                    <select class="w3-select w3-animate-input" name="Gender">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="">Your Child's Birthday:</label>
+                    <input class="w3-input w3-animate-input w3-border" style="width:70%" type="date" name="birth">
+                    <br>
+                    <button class="w3 buttonBlue buttonMedium" style="width:100%">Create Account</button>
+                    <br>
+                    <p>
+                        *By Joining, you agree to Our
+                        <a href="" style="color:blue;">Terms of Service</a>
+                    </p>
                 </div>
             </div>
+        </div>
 
 </body>
 
@@ -131,4 +136,12 @@
     AOS.init({
         duration: 1200,
     })
+
+    $(document).ready(function () {
+
+    })
+    function signIn() {
+            var url = "pages/dashboard.html?name=" + encodeURIComponent(test);
+        // document.location.href = url;
+    }
 </script>
