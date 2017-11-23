@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,45 +11,121 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
+
 <body class="">
     <!--menu-->
-    <div class="w3-display-topright w3-padding">
-            <button class="buttonRed buttonMiddle">about us</button>
-            <button class="buttonGreen buttonMiddle">contact us</button>
-     </div>
-    
-     <!--title-->
-    <div class="title" >     
-        <div  class="w3-half logo w3-container"  data-aos-anchor="#example-anchor" data-aos="flip-up"style="padding-right:1%;"><a class="w3-hover-opacity" href=""><center><img src="img/logo.png" alt="" width="340px" >
-        </center></a><br><br><button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button><br><br></div>
-        <div class="w3-half w3-container" style="text-align:justify;padding-right:10%" >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam vero adipisci reprehenderit veniam mollitia
-            <br><br>
-            <a href=""><i class="fa fa-instagram fa-2x" style="margin-right:20px;"></i></a>      <a href=""><i class="fa fa-facebook fa-2x" style="padding-right:20px;"></i></a>        <a href=""><i class="fa fa-twitter fa-2x"></i></a>
-        </div>     
+    <div class="w3-display-topright w3-padding" data-aos="fade-in">
+        <button class="buttonRed buttonMedium">about us</button>
+        <button class="buttonGreen buttonMedium">contact us</button>
     </div>
-    
-    <!--modal-->
-    <div id="signin" class="w3-modal" >
+
+    <!--title-->
+    <div class="title">
+        <div class="w3-half logo w3-container" data-aos-anchor="#example-anchor" data-aos="flip-up" style="padding-right:1%;">
+            <a class="w3-hover-opacity" href="">
+                <center>
+                    <img src="img/logo.png" alt="" width="340px">
+                    
+                </center>
+            </a>
+            <br>
+            <br>
+            <div class="w3-row">
+                    <div style="" class="w3-half">
+                            <button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button>
+                    </div>
+                    <div style="" class="w3-half"> 
+                        don't have an account?<br>
+                        Just <a  onclick="document.getElementById('signup').style.display='block'" id="link" style="color:red;">sign up</a> for free
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="w3-half w3-container" style="text-align:justify;padding-right:10%">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam vero adipisci reprehenderit veniam mollitia
+            <br>
+            <br>
+            <a href="">
+                <i class="fa fa-instagram fa-2x" style="margin-right:20px"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-facebook fa-2x" style="padding-right:20px"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-twitter fa-2x"></i>
+            </a>
+
+        </div>
+
+        <!--modal sign in-->
+        <div id="signin" class="w3-modal">
             <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
-                    <div class="w3-container modalContainer " align="center">
-                    <span onclick="document.getElementById('signin').style.display='none'" 
-                    class="w3-button w3-display-topright"><i class="fa fa-times-circle fa-2x"></i></span>
-                    <h2><B>SIGN IN</B></h2>
-    
+                <div class="w3-container modalContainer " align="center">
+                    <span onclick="document.getElementById('signin').style.display='none'" class="w3-button w3-display-topright">
+                        <i class="fa fa-times-circle fa-2x"></i>
+                    </span>
+                    <h2>
+                        <B>SIGN IN</B>
+                    </h2>
+
                     <input class="w3-input w3-animate-input w3-border" style="width:50%" type="text" name="username" placeholder="username">
                     <br>
-                    <input class="w3-input w3-animate-input w3-border"style="width:50%" type="password" name="password" placeholder="password">
+                    <input class="w3-input w3-animate-input w3-border" style="width:50%" type="password" name="password" placeholder="password">
                     <br>
-                    <button class="w3 buttonBlue">sign in</button>
+                    <button class="w3 buttonBlue buttonMedium">sign in</button>
                     <br>
-                    <p><a href="">Forget password</a></p>
+                    <p>
+                        <a href="">Forget password</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--modal sign up-->
+        <div id="signup" class="w3-modal">
+                <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
+                    <div class="w3-container modalContainer " >
+                        <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">
+                            <i class="fa fa-times-circle fa-2x"></i>
+                        </span>
+                        <h2>
+                            <B>Create a New Account</B>
+                        </h2>
+                        <label for="">Kid's Full Name:</label>
+                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="fullname" >
+                        <br>
+                        <label for="">Your Email:</label>
+                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="email" name="email">
+                        <br>
+                        <label for="">Username for your child:</label>
+                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="text" name="username">
+                        <br>
+                        <label for="">Password for your children:</label>
+                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="password" name="password" >
+                        <br>
+                        <label for="">Your Child's Gender:</label>
+                        <select class="w3-select w3-animate-input" name="Gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                              </select>
+                        <br>
+                        <br>
+                        <label for="">Your Child's Birthday:</label>
+                        <input class="w3-input w3-animate-input w3-border" style="width:70%" type="date" name="birth" >
+                        <br>
+                        <button class="w3 buttonBlue buttonMedium" style="width:100%">Create Account</button>
+                        <br>
+                        <p>
+                            *By Joining, you agree to Our <a href="" style="color:blue;">Terms of Service</a>
+                        </p>
                     </div>
                 </div>
-          </div>
+            </div>
 
-    
 </body>
+
 </html>
 <script>
     AOS.init({

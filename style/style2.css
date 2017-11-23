@@ -109,3 +109,10 @@ button{
 
 }
 
+#link:hover{
+    cursor: pointer;
+}
+
+#link{
+    text-decoration: underline;
+}
