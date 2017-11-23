@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="w3-sidebar  w3-card w3-bar-block" style="width:25%">
+        <div class="w3-container">
+            <!--logo-->
+            <img class="w3-padding-large" src="../img/logo.png" alt="" width="100%">
+
+            <!--image-->
+            <center>
+                <div class="w3-card" style="width:80%">
+                    <img class="w3" src="../img/avatar.png" alt="photo profile" width="100%">
+                </div>
+            </center>
+            <br>
+
+            <!--user's detail-->
+            <div class="">
+                <div class="w3-purple">
+                    <div class="w3-padding">
+                        Hello,
+                        <span id="username">SomeOne</span>!
+                    </div>
+                </div>
+             
+                <div class="w3-row">
+                    <!--level-->
+                    <div class="w3-half">
+                        <div class=" w3-padding w3-blue">
+                            <span style="font-size:11px;">Level</span>
+                            <br>
+                            <span id="level" style="font-size:20px;"> 0 </span>
+                            <br>
+                        </div>
+                    </div>
+                    <!--highscore-->
+                    <div class=" w3-half">
+                        <div class=" w3-container w3-padding w3-green">
+                            <span style="font-size:11px;">High Score</span>
+                            <br>
+                            <span id="highscore" style="font-size:20px;">267</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--video progress-->
+                <div class="w3-purple">
+                    <div class="w3-padding">
+                        Video played
+                        <div class="w3-row">
+                            <div class="w3-light-grey w3-rest" style="width:70%;float:left;">
+                                <div id="videoBar" class="w3-container w3-blue" style="height:20px;width:100%"></div>
+                            </div>
+                            <div class=" w3-quarter">
+                                <span style="margin-left:5px;" id="video">50</span>/100
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-book"></i> Sheet Music</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-envelope"></i> Send Us Feedback</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-users"></i> About Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-id-card-o"></i> Contact Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-power-off"></i> Sign Out</a>
+
+
+        </div>
+    </div>
+    <script> 
+        function getHighScore() {
+            width = document.getElementById("video").innerHTML;
+            console.log(width);
+            document.getElementById("videoBar").style.width = width + '%';
+        }
+
+        getHighScore();
+    </script>
+
+</body>
+
+</html>
