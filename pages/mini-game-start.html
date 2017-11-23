@@ -10,7 +10,14 @@
 
 <body>
     <div class="w3-center">
-        <canvas id="canvas"></canvas>
+        <canvas id="head"></canvas>
+        <div id="gameui">
+            <p class="w3-xlarge" id="scoreLabel">
+                <b>Score:</b>
+            </p>
+            <button class="w3-button w3-round">Quit Game</button>
+        </div>
+        <canvas id="main"></canvas>
         <div id="text-group">
             <input id="inp0" type="text" class="w3-input w3-round game-input w3-border" readonly>
             <input id="inp1" type="text" class="w3-input w3-round game-input w3-border" readonly>
@@ -33,19 +40,84 @@
 </body>
 <script>
     $(document).ready(function () {
+        //game attribute
+        var score;
+        var life;
+        var cur;
+
+        //setscore function
+        function setScore() {
+            console.log(score);
+            $("#scoreLabel").html("<b>Score: " + score + "</b>")
+        }
+
+        //start game
+        function startGame() {
+            $("#inp0").toggleClass("w3-border-blue");
+            cur = 0;
+            score = 0;
+            life = 3;
+            setScore();
+        }
+        startGame();
+
         //canvas initialization
-        var canvas = $("#canvas");
+        var canvas = $("#main");
         var ctx = canvas.get(0).getContext("2d");
-        canvas.attr("width", $(window).get(0).innerWidth - 200);
-        canvas.attr("height", 200);
+
+        //head initialization
+        var head = $("#head");
+        var headCtx = head.get(0).getContext("2d");
+
+        //set canvas size
+        function resize() {
+            canvas.attr("width", $(window).get(0).innerWidth - 200);
+            canvas.attr("height", 200);
+            head.attr("width", canvas.attr("width"));
+            head.attr("height", 100);
+        }
+        resize();
+
+        $(window).on("resize", function () {
+            resize();
+            drawHead();
+            drawCanvas();
+        })
+
+
+        //draw heart
+        var hearts = [];
+        var drawHeart = function (ct) {
+            var heart = new Image();
+            heart.onload = function () {
+                var scale = head.attr("width") * 0.1 / heart.width;
+                var canWidth = head.attr("width");
+                var start = (canWidth / 2) - (heart.width * scale * 1.5);
+                headCtx.drawImage(heart, start + (heart.width * scale) * ct, 10, heart.width * scale, heart.height * scale);
+            }
+            heart.src = ct < life ? "../img/heart.png" : "../img/heartbreak.png";
+            return heart;
+        }
+        function drawHead() {
+            headCtx.clearRect(0, 0, head.attr("width"), head.attr("height"));
+            hearts = [];
+            for (var i = 0; i < 3; i++) {
+                hearts.push(drawHeart(i));
+            }
+        }
+        drawHead();
 
         //musical lines as bg initialization
-        var bg = new Image();
-        bg.onload = function () {
-            var scale = canvas.attr("width") * 0.9 / bg.width;
-            ctx.drawImage(bg, (canvas.attr("width") / 2 - bg.width * scale / 2), 0, bg.width * scale, bg.height * scale);
+        var bg;
+        var drawBg = function () {
+            var img = new Image();
+            img.onload = function () {
+                var scale = canvas.attr("width") * 0.9 / img.width;
+                ctx.drawImage(img, (canvas.attr("width") / 2 - img.width * scale / 2), 0, img.width * scale, img.height * scale);
+            }
+            img.src = '../img/musical-lines.png';
+            return img;
         }
-        bg.src = '../img/musical-lines.png';
 
         //spawn notes
         var ct = 0;
@@ -65,30 +137,28 @@
             return img2;
         }
         var noteAssets = [];
-        for (var i = 0; i < 6; i++) {
-            noteAssets.push(drawNotes(ct++));
+        function drawCanvas() {
+            ctx.clearRect(0, 0, canvas.attr("width"), canvas.attr("height"));
+            noteAssets = [];
+            for (var i = 0; i < 6; i++) {
+                noteAssets.push(drawNotes(i));
+            }
+            bg=drawBg();
         }
+        drawCanvas();
 
-        //game attribute
-        var cur;
-        var score;
-        var life;
-        function startGame() {
-            $("#inp0").toggleClass("w3-border-blue");
-            cur = 0;
-            score = 0;
-            life = 3;
-        }
-        startGame();
-
+        //button handler
         $(".game-button").on("click", function () {
             if (isValid($(this).html())) {
                 $("#inp" + cur).val($(this).html());
                 $("#inp" + (cur++)).toggleClass("w3-border-blue");
                 $("#inp" + cur).toggleClass("w3-border-blue");
                 score += 100;
+                setScore();
             } else {
                 life--;
+                console.log(life);
+                drawHead();
             }
         })
 
@@ -116,7 +186,6 @@
                 return notes[cur] == 3;
             }
         }
-
     });
 </script>
 

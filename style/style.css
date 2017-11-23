@@ -1,5 +1,8 @@
-#canvas{
-    margin-top: 100px;
+canvas#main{
+}
+
+canvas#head{
+
 }
 
 .game-input{
@@ -8,7 +11,41 @@
     display: inline-block;
 }
 
+.game-button{
+    margin: 10px;
+}
+
 #text-group{
     text-align:left !important;
     margin-left: 200px;
+}
+
+#gameui{
+    float: right;
+    text-align: right;
+    position: fixed;
+    right: 20%;
+    top: 0;
+}
+
+#feedback-content{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+.col1{
+    width: 15%;
+    vertical-align: top;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.col2{
+    width: 85%;
+    padding: 10px;
+}
+
+#modalSubmit{
+    padding-top: 15%;
 }

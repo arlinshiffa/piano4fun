@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="w3-center">
+        <h1 style="">Send Us Feedback</h1>
+    </div>
+    <div id="feedback-content">
+        <p style="margin-left:10px">Let us know how we can improve your experience using Piano4Fun</p>
+        <form action="javascript:onSubmit();" id="feedback-form">
+            <table style="width:100%">
+                <tr>
+                    <td class="col1">Subject: </td>
+                    <td class="col2">
+                        <input type="text" class="w3-input w3-border" name="" id="" style="width:100%">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">Message: </td>
+                    <td class="col2">
+                        <textarea class="w3-input w3-border" name="" form="feedback-form" id="" style="width:100%" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="col2">
+                        <p style="margin-top:0;text-align:justify">Thanks for taking the time to give us feedback. Although we can't respond to everyone who submits
+                            a suggestion, we review many of the ideas that people send to us and use them to improve the
+                            Music4Fun experience for everyone. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="col2" style="text-align: right">
+                        <input type="submit" value="Submit" class="w3-button w3-round">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="modalSubmit" class="w3-modal">
+        <div class="w3-modal-content" style="width:50%">
+            <div class="w3-container">
+                <span onclick="document.getElementById('modalSubmit').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-center">
+                    <h2>Thank you for your feedback</h2>
+                    <h2><i class="fa fa-handshake-o"></i></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function onSubmit() {
+        document.getElementById('modalSubmit').style.display='block';
+    }
+</script>
