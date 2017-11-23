@@ -1,3 +1,110 @@
-.paddingTitle{
-    padding:300px;
+.title{
+    margin-top:240px;
 }
+
+a:hover{
+    color: red;
+}
+
+/* style button */
+button{
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    transition: all .1s linear;
+    
+  }
+
+.buttonLarge{
+    padding: 12px 20px;
+}
+
+.buttonMedium{
+    padding: 8px 10px;
+}
+
+.buttonBlue{
+    box-shadow: 0 5px 0 #127baf;
+    background: #4db7fd;
+    font-weight:bold;
+    color:white;
+}
+
+.buttonBlue:hover{
+    box-shadow: 0 2px 0 #127baf;
+    transform: translateY(3px);
+    background: black;
+    color:#127baf;
+  }
+
+.buttonRed{
+    box-shadow: 0 5px 0 #812722;
+    background:  hsl(0, 62%, 59%);
+    font-weight:bold;
+    color:white;
+}
+
+.buttonRed:hover{
+  box-shadow: 0 2px 0 #812722;
+  transform: translateY(3px);
+  background: black;
+  color:hsl(0, 62%, 59%);
+}
+
+.buttonGreen{
+    box-shadow: 0 5px 0 rgb(32, 102, 32) ;
+    background: rgb(50, 165, 50);
+    font-weight:bold;
+    color:white;
+}
+
+.buttonGreen:hover{
+    box-shadow: 0 2px 0 rgb(32, 102, 32);
+    transform: translateY(3px);
+    background: black;
+    color:rgb(50, 165, 50);
+}
+
+.buttonPurple{
+    box-shadow: 0 5px 0 rgb(99, 55, 99) ;
+    background: rgb(160, 89, 160);
+    font-weight:bold;
+}
+
+.buttonPurple:hover{
+    box-shadow: 0 2px 0 rgb(99, 55, 99);
+    transform: translateY(3px);
+    background: black;
+    color:rgb(160, 89, 160);
+}
+
+.buttonOrange{
+    box-shadow: 0 5px 0 rgb(129, 55, 33) ;
+    background: rgb(252, 100, 62);
+    font-weight:bold;
+}
+
+.buttonOrange:hover{
+    box-shadow: 0 2px 0 rgb(129, 55, 33);
+    transform: translateY(3px);
+    background: black;
+    color:rgb(252, 100, 62);
+}
+
+.buttonBlack{
+    box-shadow: 0 5px 0 rgb(0, 0, 0) ;
+    background: rgb(34, 34, 34);
+    font-weight:bold;
+    color:white;
+}
+
+.buttonBlack:hover{
+    box-shadow: 0 2px 0 rgb(0,0,0);
+    transform: translateY(3px);
+    color:rgb(128, 213, 216);
+
+}
+
