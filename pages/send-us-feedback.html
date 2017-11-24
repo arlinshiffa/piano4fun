@@ -69,25 +69,23 @@
 
 
     <!-- sidebar -->
-    <iframe src="sidebar.html" id="ifr" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
     
     <!--overlay-->
-    <div class="w3-overlay w3-animate-opacity" onclick="openIfr()" style="cursor:pointer;z-index:1" id="myOverlay">
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
     </div>
 
     <!--menu button-->
     <div class="w3-padding menu-btn">
-        <button class="w3-button w3-xlarge" onclick="openIfr()">☰</button>
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
     </div>
 </body>
 
 </html>
 
 <script>
-    $(document).ready(function () {
-    })
-    function openIfr() {
-        $("#ifr").toggleClass("w3-hide");
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
     }
     function onSubmit() {
