@@ -65,6 +65,13 @@
     <div class="w3-padding menu-btn">
         <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
     </div>
+
+    <!-- home button -->
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
 </body>
 
 </html>
@@ -72,5 +79,11 @@
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
+        $(".menu-btn").toggleClass("w3-hide");
+        $(".home-btn").toggleClass("w3-hide");
+        $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
+    }
+    function goHome() {
+        window.location.href = "dashboard.html"
     }
 </script>

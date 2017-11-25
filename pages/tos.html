@@ -16,14 +16,6 @@
 
 <body class="">
 
-    <!-- sidebar -->
-    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
-
-    <!--overlay-->
-    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
-    </div>
-
-
     <!--logo-->
     <div class="w3-padding-large" style="">
         <img src="../img/logo.png" alt="" width="190px">
@@ -49,8 +41,4 @@
 
 </html>
 <script>
-    function openSideBar() {
-        $("#sidebar").toggleClass("w3-hide");
-        $("#myOverlay").toggleClass("w3-show");
-    }
 </script>
