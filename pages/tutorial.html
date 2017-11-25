@@ -38,7 +38,7 @@
     </div>
 
     <!--logo-->
-    <div class="w3-padding-large" style="margin-left:60px;">
+    <div class="w3-padding-large" id="logo" style="margin-left:60px;">
         <img src="../img/logo.png" alt="" width="190px">
         <h1 class="w3-center">Tutorial</h1>
     </div>
@@ -46,25 +46,19 @@
     <div id="scroll" class="h-scroll tutorial-content">
         <div id="container">
             <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
+                <h3 class="circle-content">First 3 Notes</h3>
             </div>
             <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
+                <h3 class="circle-content">F,G</h3>
             </div>
             <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
+                <h3 class="circle-content">Right Hand Practice</h3>
             </div>
             <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
+                <h3 class="circle-content">Fur Elise</h3>
             </div>
             <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
-            </div>
-            <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
-            </div>
-            <div class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">First B Notes</h3>
+                <h3 class="circle-content">What's Next</h3>
             </div>
         </div>
     </div>
@@ -80,15 +74,18 @@
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
+        $(".menu-btn").toggleClass("w3-hide");
+        $(".home-btn").toggleClass("w3-hide");
+        $("#logo").css("opacity",$("#logo").css("opacity")=='1'?0:1);
+    }
+    function goHome() {
+        window.location.href = "dashboard.html"
     }
     AOS.init({
         duration: 1200,
     })
 
-    function goHome() {
-        window.location.href = "dashboard.html"
-    }
-
+    
     var scroller = {};
     scroller.e = document.getElementById("scroll");
 

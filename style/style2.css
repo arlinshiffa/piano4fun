@@ -197,3 +197,7 @@ margin-bottom:50px;
 .social-ico:hover{
     transform: translateY(-10px);
 }
+
+.opacity{
+    background: rgba(50, 155, 67, 0.418)
+}
