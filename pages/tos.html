@@ -23,22 +23,28 @@
     <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
     </div>
 
-    <!--menu button-->
-    <div class="w3-padding menu-btn">
-        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
-    </div>
 
-<<<<<<< HEAD
-    <div class="w3-padding home-btn">
-        <button class="w3-button w3-xlarge" onclick="goHome()"><i class="fa fa-home" aria-hidden="true"></i></button>
-    </div>
-=======
     <!--logo-->
-    <div class="w3-padding-large" style="margin-left:60px;">
+    <div class="w3-padding-large" style="">
         <img src="../img/logo.png" alt="" width="190px">
     </div>
 
->>>>>>> 3378e059b80ea185cf844a463690d60fa8cf2cdd
+
+    <div class="w3-display-middle w3-padding-large w3-card-4" style="width:50%;">
+        <h2 class="w3-center">
+            Terms of Service
+        </h2>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In corrupti explicabo laudantium dicta voluptatibus optio voluptate magnam quas numquam, esse vero ratione modi aliquid nemo fugit quibusdam eveniet? Magni, unde!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo aperiam mollitia impedit tenetur placeat provident, ullam labore ipsam fugit esse alias, odit, sit consequuntur animi nesciunt culpa laborum tempora odio.
+        </p>
+    </div>
+
+    <div class="w3-display-bottomleft w3-padding-large">
+        <a href="../index.html"><i class="fa fa-home fa-4x"></i></a>
+    </div>
+
+
 </body>
 
 </html>
@@ -46,9 +52,5 @@
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
-    }
-
-    function goHome(){
-        window.location.href="dashboard.html"
     }
 </script>
