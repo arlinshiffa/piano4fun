@@ -49,7 +49,7 @@
 
     <div id="scroll" class="h-scroll tutorial-content">
         <div id="container">
-            <div class="w3-circle w3-center w3-border circle">
+            <div onclick="window.location.href='music-theory.html'" class="w3-circle w3-center w3-border circle">
                 <h3 class="circle-content">First 3 Notes</h3>
             </div>
             <div class="w3-circle w3-center w3-border circle">
@@ -58,8 +58,9 @@
             <div class="w3-circle w3-center w3-border circle">
                 <h3 class="circle-content">Right Hand Practice</h3>
             </div>
-            <div class="w3-circle w3-center w3-border circle">
+            <div onclick="window.location.href='video-player.html'" class="w3-circle w3-center w3-border circle">
                 <h3 class="circle-content">Fur Elise</h3>
+                <i class="fa fa-video-camera fa-2x" aria-hidden="true"></i>
             </div>
             <div class="w3-circle w3-center w3-border circle">
                 <h3 class="circle-content">What's Next</h3>
@@ -89,7 +90,7 @@
         duration: 1200,
     })
 
-    
+
     var scroller = {};
     scroller.e = document.getElementById("scroll");
 

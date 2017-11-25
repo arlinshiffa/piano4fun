@@ -139,6 +139,10 @@
     display: inline-block;
 }
 
+.circle:hover{
+    cursor: pointer;
+}
+
 .circle-content{
     margin-top: 40%;
 }
