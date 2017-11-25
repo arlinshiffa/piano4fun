@@ -284,6 +284,19 @@
 
 </html>
 <script>
+    $(document).ready(function () {
+        // Get the modal
+        var setting = document.getElementById('settingModal');
+        var progress = document.getElementById('progressModal');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == setting || event.target == progress) {
+                progress.style.display = "none";
+                setting.style.display = "none";
+            }
+        }
+    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
