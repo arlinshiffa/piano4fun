@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/w3.css">
     <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="style/gradient.css">
     <link rel="stylesheet" href="lib/font-awesome.css">
     <script src="lib/jquery-3.2.1.js"></script>
     <link href="lib/aos.css" rel="stylesheet">
     <script src="lib/aos.js"></script>
 </head>
 
-<body class="">
+<body class="content-container">
+    <div class="blur" style="padding:0;width:100%"></div>
     <!--menu-->
     <div class="w3-display-topright w3-padding" data-aos="fade-in">
         <button class="buttonRed buttonMedium">about us</button>
@@ -38,7 +40,7 @@
                 <div style="" class="w3-half">
                     don't have an account?
                     <br> Just
-                    <a onclick="document.getElementById('signup').style.display='block'" id="link" style="color:red;">sign up</a> for free
+                    <a onclick="document.getElementById('signup').style.display='block'" id="link">sign up</a> for free
                 </div>
             </div>
 
@@ -76,7 +78,11 @@
                         <br>
                         <input class="w3-input w3-animate-input w3-border" style="width:50%" type="password" name="password" placeholder="password">
                         <br>
+<<<<<<< HEAD
                         <input type="submit" value="SIGN IN" class="w3 buttonBlue buttonMedium" onclick="test()"></input>
+=======
+                        <input type="submit" class="w3-button w3-round buttonBlue buttonMedium" onclick="test()" value="SIGN IN"></input>
+>>>>>>> 7796046501cf8869a9807ad7c893b191b0d5f869
                         <br>
                         <p>
                             <a href="" style="color:blue;">Forgot password?</a>
@@ -128,7 +134,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>
@@ -141,7 +147,7 @@
 
     })
     function signIn() {
-            var url = "pages/dashboard.html?name=" + encodeURIComponent(test);
+        var url = "pages/dashboard.html?name=" + encodeURIComponent(test);
         // document.location.href = url;
     }
 </script>
