@@ -14,19 +14,51 @@
 </head>
 
 <body class="w3-black">
-    asasdasdas
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!--logo-->
+    <div class="w3-padding-large" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
 </body>
 
 </html>
 
 <script>
-    window.onload = function () {
-        var url = document.location.href,
-            params = url.split('?')[1].split('&'),
-            data = {}, tmp;
-        for (var i = 0, l = params.length; i < l; i++) {
-            tmp = params[i].split('=');
-            data[tmp[0]] = tmp[1];
-        }
+    // window.onload = function () {
+    //     var url = document.location.href,
+    //         params = url.split('?')[1].split('&'),
+    //         data = {}, tmp;
+    //     for (var i = 0, l = params.length; i < l; i++) {
+    //         tmp = params[i].split('=');
+    //         data[tmp[0]] = tmp[1];
+    //     }
+    // }
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
+    AOS.init({
+        duration: 1200,
+    })
+
+    function goHome(){
+        window.location.href="dashboard.html"
     }
 </script>
