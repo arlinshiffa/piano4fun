@@ -85,6 +85,7 @@
 .level-element{
     width: 50%;
     display: inline-block;
+    height: 50%;
 }
 
 .sheet-collection::-webkit-scrollbar { 
@@ -108,4 +109,12 @@
 {
 	background-color: #000000;
 	border: 1px solid #555555;
+}
+
+.lock{
+    background: rgba(161, 161, 161,0.7);
+    z-index:5;
+    width: 100%;
+    height:100%;
+    position:absolute;
 }
