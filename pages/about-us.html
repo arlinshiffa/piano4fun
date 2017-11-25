@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+
+<body class="">
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <!-- <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div> -->
+
+    <!-- home button -->
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!--logo-->
+    <!-- <div class="w3-padding-large fixed" style="margin-left:60px">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div> -->
+
+    <div class="title w3-display-container">
+        <button class="w3-button w3-xlarge w3-display-topleft" style="margin:10px" onclick="openSideBar()">☰</button>
+        <img class="w3-display-topleft" style="margin-left:80px;margin-top: 10px" src="../img/logo.png" alt="" width="190px">
+        <h1 class="w3-xxxlarge w3-display-topmiddle">About Piano4Fun</h1>
+    </div>
+
+    <!-- <div class="w3-center fixed">
+        <h1 class="w3-xxxlarge">About Piano4Fun</h1>
+    </div> -->
+    <div class="w3-center" style="margin-top:50px">
+        <div class="w3-padding-large" style="width:75%;height:450px;margin-top:10px;display:inline-block">
+            <div class="w3-row">
+                <div class="about-content" style="margin-top:25px">
+                    <img src="../img/piano-course-1.jpg" width="300px" alt="">
+                </div>
+                <div class="about-content">
+                    <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie eleifend dolor, in egestas
+                        purus feugiat eu. Nam ut tincidunt tortor, non bibendum nibh. Phasellus fermentum et neque ut convallis.
+                        Aliquam hendrerit ut libero non tempus. Donec scelerisque ligula a ipsum aliquet accumsan. Vivamus
+                        scelerisque porttitor dui, et malesuada turpis. Aliquam egestas justo eget feugiat eleifend. Donec
+                        mollis pulvinar tellus vel fermentum. Donec viverra dignissim sem non auctor. Vestibulum ante ipsum
+                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus molestie condimentum
+                        orci sit amet fermentum. Etiam eu libero maximus, commodo nibh eget, fermentum ex. Duis bibendum
+                        odio tempor lacus luctus, eu accumsan elit mattis.</p>
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="about-content">
+                    <p style="text-align: justify">Donec arcu arcu, vulputate sed orci id, sagittis posuere urna. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Orci varius natoque
+                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus gravida accumsan justo.
+                        Etiam lacinia maximus risus et vestibulum. Phasellus convallis tellus felis, sed tempus justo varius
+                        eget. Sed orci risus, eleifend a purus sit amet, vehicula sollicitudin tellus. Vivamus molestie sapien
+                        at vehicula gravida. Cras sit amet finibus leo, sit amet imperdiet est. Proin posuere odio molestie
+                        nulla congue, bibendum consequat massa sagittis. Morbi et purus sed eros mollis vulputate. Praesent
+                        eget turpis ipsum.</p>
+                </div>
+                <div class="about-content" style="margin-top:25px">
+                    <img src="../img/piano-course-2.jpg" width="300px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
+</script>

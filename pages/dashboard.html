@@ -95,7 +95,9 @@
     </div>
     <br>
     <div class="" style="margin-left:84.5%;">
-        <a href="level-home.html"><button class="buttonPurple buttonLarge  w3-text-white">Start Course</button></a>
+        <a href="level-home.html">
+            <button class="buttonPurple buttonLarge  w3-text-white">Start Course</button>
+        </a>
     </div>
     <br>
     <br>
@@ -252,27 +254,27 @@
                             <br>
                             <label for="">Confirm New Password :</label>
                             <input type="password" class="w3-input w3-border w3-animated-input" width="80%">
-                          
+
                         </form>
                         <br>
-                        
+
                     </div>
 
                 </div>
                 <div class="w3-padding-large">
-                        <span onclick="document.getElementById('settingModal').style.display='none'" class="w3-button w3-display-bottomleft w3-white">
-                                <i class="fa fa-arrow-left fa-3x"></i>
-                         </span>
+                    <span onclick="document.getElementById('settingModal').style.display='none'" class="w3-button w3-display-bottomleft w3-white">
+                        <i class="fa fa-arrow-left fa-3x"></i>
+                    </span>
                 </div>
 
                 <div class="w3-padding-large" style="margin-left:300px">
-                       <button class="buttonBlue buttonLarge ">Save</button>
-                       <button class="buttonBlue buttonMedium" style="margin-left:390px">reset</button>
-                      
+                    <button class="buttonBlue buttonLarge ">Save</button>
+                    <button class="buttonBlue buttonMedium" style="margin-left:390px">reset</button>
+
                 </div>
-               
-               
-            </div>  
+
+
+            </div>
         </div>
         <br>
         <br>
@@ -282,6 +284,19 @@
 
 </html>
 <script>
+    $(document).ready(function () {
+        // Get the modal
+        var setting = document.getElementById('settingModal');
+        var progress = document.getElementById('progressModal');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == setting || event.target == progress) {
+                progress.style.display = "none";
+                setting.style.display = "none";
+            }
+        }
+    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
