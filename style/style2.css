@@ -4,6 +4,7 @@
 
 a:hover{
     color: red;
+    cursor: pointer;
 }
 
 /* style button */
@@ -38,6 +39,7 @@ button{
     transform: translateY(3px);
     background: #095f86 !important;
     color:#96c8df !important;
+    cursor: pointer;
   }
 
 .buttonRed{
@@ -50,8 +52,8 @@ button{
 .buttonRed:hover{
   box-shadow: 0 2px 0 #812722;
   transform: translateY(3px);
-  background: black;
-  color:hsl(0, 62%, 59%);
+  background: #64100d;
+  color:hsl(0, 75%, 78%);
 }
 
 .buttonGreen{
@@ -64,8 +66,8 @@ button{
 .buttonGreen:hover{
     box-shadow: 0 2px 0 rgb(32, 102, 32);
     transform: translateY(3px);
-    background: black;
-    color:rgb(50, 165, 50);
+    background: rgb(18, 80, 18);
+    color:rgb(136, 224, 136);
 }
 
 .buttonPurple{
@@ -77,8 +79,8 @@ button{
 .buttonPurple:hover{
     box-shadow: 0 2px 0 rgb(99, 55, 99);
     transform: translateY(3px);
-    background: black;
-    color:rgb(160, 89, 160);
+    background: rgb(65, 4, 65);
+    color:rgb(219, 146, 219);
 }
 
 .buttonOrange{

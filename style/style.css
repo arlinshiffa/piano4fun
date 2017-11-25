@@ -16,16 +16,15 @@ canvas#head{
 }
 
 #text-group{
-    text-align:left !important;
-    margin-left: 200px;
+    margin-left: -160px;
 }
 
 #gameui{
     float: right;
     text-align: right;
-    position: fixed;
-    right: 20%;
-    top: 0;
+    position: absolute;
+    right: 15%;
+    top: 75px;
 }
 
 #feedback-content{

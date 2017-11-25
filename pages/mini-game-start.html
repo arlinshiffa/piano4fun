@@ -9,13 +9,16 @@
 </head>
 
 <body>
+    <div class="w3-padding-large" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
     <div class="w3-center">
         <canvas id="head"></canvas>
         <div id="gameui">
             <p class="w3-xlarge" id="scoreLabel">
                 <b>Score:</b>
             </p>
-            <button class="w3-button w3-round">Quit Game</button>
+            <a class="w3-button w3-round" href="mini-game-home.html">Quit Game</a>
         </div>
         <canvas id="main"></canvas>
         <div id="text-group">
@@ -72,7 +75,7 @@
         //set canvas size
         function resize() {
             canvas.attr("width", $(window).get(0).innerWidth - 200);
-            canvas.attr("height", 200);
+            canvas.attr("height", 150);
             head.attr("width", canvas.attr("width"));
             head.attr("height", 100);
         }
@@ -143,7 +146,7 @@
             for (var i = 0; i < 6; i++) {
                 noteAssets.push(drawNotes(i));
             }
-            bg=drawBg();
+            bg = drawBg();
         }
         drawCanvas();
 
