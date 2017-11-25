@@ -22,81 +22,6 @@
 
 <body class="">
 
-    <!--sidebar-->
-    <div class="w3-sidebar  w3-animate-left w3-bar-block " id="mySidebar" style="width:25%;display:block;z-index:5">
-        <div class="w3-container">
-            <!--logo-->
-            <img class="w3-padding-large" src="../img/logo.png" alt="" width="100%">
-
-            <!--image-->
-            <center>
-                <div class="w3-card" style="width:80%">
-                    <img class="w3" src="../img/avatar.png" alt="photo profile" width="100%">
-                </div>
-            </center>
-            <br>
-
-            <!--user's detail-->
-            <div class="">
-                <div class="w3-purple">
-                    <div class="w3-padding">
-                        Hello,
-                        <span id="username">SomeOne</span>!
-                    </div>
-                </div>
-
-                <div class="w3-row">
-                    <!--level-->
-                    <div class="w3-half">
-                        <div class=" w3-padding w3-blue">
-                            <span style="font-size:11px;">Level</span>
-                            <br>
-                            <span id="level" style="font-size:20px;"> 0 </span>
-                            <br>
-                        </div>
-                    </div>
-                    <!--highscore-->
-                    <div class=" w3-half">
-                        <div class=" w3-container w3-padding w3-green">
-                            <span style="font-size:11px;">High Score</span>
-                            <br>
-                            <span id="highscore" style="font-size:20px;">267</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!--video progress-->
-                <div class="w3-purple">
-                    <div class="w3-padding">
-                        Video played
-                        <div class="w3-row">
-                            <div class="w3-light-grey w3-rest" style="width:70%;float:left;">
-                                <div id="videoBar" class="w3-container w3-blue" style="height:20px;width:100%"></div>
-                            </div>
-                            <div class=" w3-quarter">
-                                <span style="margin-left:5px;" id="video">50</span>/100
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <a href="#" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-book"></i> Sheet Music</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-envelope"></i> Send Us Feedback</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-users"></i> About Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-id-card-o"></i> Contact Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-power-off"></i> Sign Out</a>
-
-
-        </div>
-    </div>
-
     <div class="w3-container w3-row" style="margin-left:28%;float:left; margin-bottom:20px;">
         <div class="chart-container w3-container w3-border w3-card w3-grey w3-col" style="margin-top:50px;width:800px">
             <div class="pr-chart-ctrl" style="">
@@ -162,8 +87,8 @@
         <button class="buttonLarge buttonPurple w3-text-white">Start Course</button>
     </div>
    
-
-
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-animate-left"></iframe>
 
 </body>
 

@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <!--logo-->
+    <div class="w3-padding-large" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
     <div class="w3-center">
         <h1 style="">Send Us Feedback</h1>
     </div>
@@ -70,7 +74,7 @@
 
     <!-- sidebar -->
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
-    
+
     <!--overlay-->
     <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
     </div>
@@ -78,6 +82,13 @@
     <!--menu button-->
     <div class="w3-padding menu-btn">
         <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+
+    <!-- home button -->
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
     </div>
 </body>
 
@@ -88,6 +99,11 @@
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
     }
+    
+    function goHome() {
+        window.location.href = "dashboard.html"
+    }
+    
     function onSubmit() {
         document.getElementById('modalSubmit').style.display = 'block';
     }
