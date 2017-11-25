@@ -141,7 +141,17 @@
     })
 
     $(document).ready(function () {
+        // Get the modal
+        var signup = document.getElementById('signup');
+        var signin = document.getElementById('signin');
 
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == signin || event.target == signup) {
+                signup.style.display = "none";
+                signin.style.display = "none";
+            }
+        }
     })
     function signIn() {
         var url = "pages/dashboard.html?name=" + encodeURIComponent(test);

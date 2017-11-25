@@ -85,27 +85,57 @@
 .level-element{
     width: 50%;
     display: inline-block;
+    height: 50%;
 }
 
-.sheet-collection::-webkit-scrollbar { 
+.h-scroll::-webkit-scrollbar { 
     display: block; 
 }
 
-.sheet-collection::-webkit-scrollbar-track
+.h-scroll::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
-.sheet-collection::-webkit-scrollbar
+.h-scroll::-webkit-scrollbar
 {
     width: 5px;
     height: 5px;
 	background-color: #F5F5F5;
 }
 
-.sheet-collection::-webkit-scrollbar-thumb
+.h-scroll::-webkit-scrollbar-thumb
 {
 	background-color: #000000;
 	border: 1px solid #555555;
+}
+
+.lock{
+    background: rgba(161, 161, 161,0.7);
+    z-index:5;
+    width: 100%;
+    height:100%;
+    position:absolute;
+}
+
+.circle{
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.circle-content{
+    margin-top: 40%;
+}
+
+.tutorial-content{
+    margin:0px 10% 0px 15%;
+    overflow-x: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
