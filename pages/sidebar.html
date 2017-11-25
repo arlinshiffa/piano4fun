@@ -12,12 +12,14 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
 
-<body>
+<body class="">
     <!--sidebar-->
-    <div class="w3-sidebar w3-animate-left w3-bar-block " id="mySidebar" style="width:100%;display:block;z-index:5">
+    <div class="w3-sidebar w3-light-gray w3-animate-left w3-bar-block " id="mySidebar" style="width:100%;display:block;z-index:5">
         <div class="w3-container">
             <!--logo-->
-            <a href="../index.html" ><img class="w3-padding-large" src="../img/logo.png" alt="" width="100%"></a>
+            <a href="dashboard.html" target="_parent">
+                <img class="w3-padding-large" src="../img/logo.png" alt="" width="100%">
+            </a>
 
             <!--image-->
             <center>
@@ -29,7 +31,7 @@
 
             <!--user's detail-->
             <div class="">
-                <div class="w3-purple">
+                <div class="w3-black">
                     <div class="w3-padding">
                         Hello,
                         <span id="username">SomeOne</span>!
@@ -39,7 +41,7 @@
                 <div class="w3-row">
                     <!--level-->
                     <div class="w3-half">
-                        <div class=" w3-padding w3-blue">
+                        <div class=" w3-padding w3-light-blue w3-border w3-border-white">
                             <span style="font-size:11px;">Level</span>
                             <br>
                             <span id="level" style="font-size:20px;"> 0 </span>
@@ -48,7 +50,7 @@
                     </div>
                     <!--highscore-->
                     <div class=" w3-half">
-                        <div class=" w3-container w3-padding w3-green">
+                        <div class=" w3-container w3-padding w3-light-blue w3-border w3-border-white ">
                             <span style="font-size:11px;">High Score</span>
                             <br>
                             <span id="highscore" style="font-size:20px;">267</span>
@@ -57,12 +59,12 @@
                 </div>
 
                 <!--video progress-->
-                <div class="w3-purple">
+                <div class=" w3-light-blue w3-border w3-border-white">
                     <div class="w3-padding">
                         Video played
                         <div class="w3-row">
                             <div class="w3-light-grey w3-rest" style="width:70%;float:left;">
-                                <div id="videoBar" class="w3-container w3-blue" style="height:20px;width:100%"></div>
+                                <div id="videoBar" class="w3-container" style="height:20px;width:100%;background-color:#8A2BE2;"></div>
                             </div>
                             <div class=" w3-quarter">
                                 <span style="margin-left:5px;" id="video">50</span>/100
@@ -73,30 +75,33 @@
 
             </div>
 
-            <a href="sheet-music.html" target="_parent" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-book"></i> Sheet Music</a>
-            <a href="send-us-feedback.html" target="_parent" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-envelope"></i> Send Us Feedback</a>
-            <a href="about-us.html" target="_parent" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-users"></i> About Piano4Fun</a>
-            <a href="contact-us.html" target="_parent" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-id-card-o"></i> Contact Piano4Fun</a>
-            <a href="../index.html" target="_parent" class="w3-bar-item w3-button w3-grey">
-                <i class="fa fa-power-off"></i> Sign Out</a>
+            <div class="">
+                <a href="sheet-music.html" target="_parent" class="w3-bar-item w3-button w3-light-gray w3-text-black">
+                    <i class="fa fa-book"></i> Sheet Music</a>
+                <a href="send-us-feedback.html" target="_parent" class="w3-bar-item w3-button  w3-light-gray w3-text-black">
+                    <i class="fa fa-envelope"></i> Send Us Feedback</a>
+                <a href="about-us.html" target="_parent" class="w3-bar-item w3-button  w3-light-gray w3-text-black">
+                    <i class="fa fa-users"></i> About Piano4Fun</a>
+                <a href="contact-us.html" target="_parent" class="w3-bar-item w3-button  w3-light-gray w3-text-black">
+                    <i class="fa fa-id-card-o"></i> Contact Piano4Fun</a>
+                <a href="../index.html" target="_parent" class="w3-bar-item w3-button  w3-light-gray w3-text-black">
+                    <i class="fa fa-power-off"></i> Sign Out</a>
+            </div>
+
 
 
         </div>
     </div>
 
     <!--overlay-->
-    <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer"  id="myOverlay">
+    <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
     </div>
 
     <!--menu button-->
     <div class="w3-padding">
         <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
     </div>
-   
+
     <script> 
         function getHighScore() {
             width = document.getElementById("video").innerHTML;
@@ -117,7 +122,7 @@
         var sidebar = document.getElementById('mySideBar');
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function() {
+        window.onclick = function () {
             if (event.target == sidebar) {
                 sidebar.style.display = "none";
             }

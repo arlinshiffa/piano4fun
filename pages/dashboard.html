@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="../style/gradient.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
-
     <script src="../lib/jquery.easypiechart.min.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="img/piano.png" />
 
 </head>
 
@@ -24,7 +24,7 @@
     <div class="blur" style="padding:0;width:100%"></div>
     <!--rectangle menu-->
     <div class="w3-container w3-row" style="margin-left:28%;float:left; margin-bottom:20px;">
-        <div class="chart-container w3-container w3-border w3-card w3-grey w3-col" style="margin-top:50px;width:800px">
+        <div class="chart-container w3-container w3-border w3-card-4 w3-light-blue w3-col" style="margin-top:50px;width:800px">
             <div class="pr-chart-ctrl" style="">
                 <div class="pr-chart" data-percent="80">
                     <i></i>
@@ -54,14 +54,14 @@
             </div>
 
         </div>
-        <button class="w3-container w3-card w3-rest w3-grey w3-hover-opacity" onclick="document.getElementById('progressModal').style.display='block'"
+        <button class="w3-container w3-card w3-rest  w3-hover-opacity w3-light-blue" onclick="document.getElementById('progressModal').style.display='block'"
             style="height:232px;margin-top:50px;">
             <i class="fa fa-angle-right fa-4x" style="float:right;margin-top:px"></i>
         </button>
     </div>
 
     <div class="w3-row-padding" style="margin-left:28.5% ;">
-        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity rectangle" onclick="document.getElementById('settingModal').style.display='block'"
+        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle  w3-light-blue" onclick="document.getElementById('settingModal').style.display='block'"
             style="height:150px;width:190px;margin-right:20px;">
             <br>
             <br>
@@ -69,8 +69,9 @@
             <b>
                 <h5 class=""><b>Profile Setting</b></h5>
             </b>
+           
         </div>
-        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity rectangle" style="height:150px;width:400px;margin-right:20px;">
+        <div class=" w3-center w3-third w3-card-4 w3-hover-opacity rectangle  w3-light-blue" style="height:150px;width:400px;margin-right:20px;">
             <br>
             <br>
             <br>
@@ -81,7 +82,7 @@
                 <h5 class=""><b>Virtual Piano</b></h5>
             </b>
         </div>
-        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity rectangle" style="height:150px;width:200px;">
+        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle w3-light-blue" style="height:150px;width:200px;">
             <br>
             <br>
             <br>
@@ -96,7 +97,7 @@
     <br>
     <div class="" style="margin-left:84.5%;">
         <a href="level-home.html">
-            <button class="buttonPurple buttonLarge  w3-text-white">Start Course</button>
+            <button class="buttonBlack buttonLarge w3-text-white w3-hover-text-purple">Start Course</button>
         </a>
     </div>
     <br>
@@ -106,12 +107,12 @@
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-animate-left"></iframe>
 
     <!--modal progress-->
-    <div id="progressModal" class="w3-modal">
-        <div class="w3-modal-content  w3-animate-right " style="width:1000px">
+    <div id="progressModal" class="w3-modal ">
+        <div class="w3-modal-content  w3-animate-right w3-black" style="width:1000px">
             <div class="w3-container modalContainer "></div>
             <br>
             <b>
-                <h4 class="w3-center">Your Progress</h4>
+                <h3 class="w3-center"><b>Your Progress</b></h3>
             </b>
             <div class="chart-container w3-container w3-white ">
                 <div class="pr-chart-ctrl" style="">
@@ -208,7 +209,7 @@
             <br>
             <br>
             <br>
-            <span onclick="document.getElementById('progressModal').style.display='none'" class="w3-button w3-display-bottomleft w3-white">
+            <span onclick="document.getElementById('progressModal').style.display='none'" class="w3-display-bottomleft">
                 <i class="fa fa-arrow-left fa-5x"></i>
             </span>
 
@@ -284,19 +285,6 @@
 
 </html>
 <script>
-    $(document).ready(function () {
-        // Get the modal
-        var setting = document.getElementById('settingModal');
-        var progress = document.getElementById('progressModal');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == setting || event.target == progress) {
-                progress.style.display = "none";
-                setting.style.display = "none";
-            }
-        }
-    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
