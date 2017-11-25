@@ -11,9 +11,14 @@
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <link rel="stylesheet" href="../style/gradient.css">
+    <title>Piano4Fun | Contact </title>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+
 </head>
 
-<body class="">
+<body class="content-container">
     <!-- sidebar -->
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
 
@@ -39,22 +44,22 @@
     </div>
 
 
-    <div class="w3-center">
-        <h1 class="w3-xxxlarge">Contact Piano4Fun</h1>
+    <div class="w3-center ">
+        <h1 class="w3-text-black"><b>Contact Piano4Fun</b></h1>
     </div>
-
+    <br>
 
     <div class="">
 
-        <div class="w3-display-middle w3-padding-large w3-card-4" style="width:75%;height:450px;margin-top:10px;">
+        <div class="w3-display-middle w3-padding-large w3-card-4 w3-text-black" style="width:75%;height:450px;margin-top:10px;">
             <div class="w3-row">
                 <div class="w3-col s6 w3-padding w3-center" style="margin-top:85px;">
-                    <table class="w3-card w3-large w3-table w3-border w3-striped ">
+                    <table class="w3-card w3-medium w3-table w3-border w3-striped " data-aos="zoom-in-down">
                         <tr>
                             <td>
                                 <i class="fa fa-map-marker"></i>
                             </td>
-                            <td>Jl. xxxx no. y, Bandung</td>
+                            <td>Jalan Ciumbuleuit No. 94, Hegarmanah, Cidadap, Hegarmanah, Cidadap, Kota Bandung, Jawa Barat 40141</td>
                         </tr>
                         <tr>
                             <td>
@@ -114,4 +119,8 @@
     function goHome() {
         window.location.href = "dashboard.html"
     }
+    AOS.init({
+        duration: 1200,
+    })
+
 </script>

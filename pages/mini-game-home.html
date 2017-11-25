@@ -12,12 +12,17 @@
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../style/gradient.css">
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <title>Piano4Fun | Mini Game </title>
+    
 </head>
 
-<body class="">
+<body class="content-container">
     <!--logo-->
+    <div class="blur" style="padding:0;width:100%"></div>
     <div class="w3-padding-large" id="logo" style="margin-left:60px;">
-        <img src="../img/logo.png" alt="" width="190px">
+        <a href="dashboard.html"><img src="../img/logo.png" alt="" width="190px"></a>
     </div>
 
     <div class="w3-row" style="width:70%;margin-left: 20%;margin-top:5%">
@@ -31,8 +36,8 @@
                 tincidunt rhoncus.</p>
         </div>
         <div class="w3-left w3-padding-medium w3-center" style="width:33%;margin-top:10%" data-aos-anchor="#example-anchor" data-aos="fade-left">
-            <a class="w3-button w3-large buttonBlue w3-round" href="mini-game-start.html">Start Game</a>
-            <h3>High Score:0</h3>
+            <button onclick ="window.location.href='mini-game-start.html';"class="w3-hover-text-blue w3-large buttonBlack buttonLarge w3-round" href="mini-game-start.html">Start Game</button>
+            <h3>High Score: 0</h3>
         </div>
     </div>
     <!-- sidebar -->

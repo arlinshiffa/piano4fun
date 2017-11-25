@@ -66,13 +66,15 @@
 
 .sheet-container{
     width: 200px;
-    margin: 10px 0;
+    margin: 20 20;
     margin-right: 40px;
     display: inline-block;
+    background-color: rgba(105, 104, 104, 0.472);
 }
 
 .sheet-collection{
     margin:0px 10% 0px 15%;
+    height: 1000px;
     overflow-x: auto;
     overflow-x: scroll;
     overflow-y: hidden;

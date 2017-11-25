@@ -11,9 +11,13 @@
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <link rel="stylesheet" href="../style/gradient.css">
+    <title>Piano4Fun | About  </title>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
 </head>
 
-<body class="">
+<body class="content-container">
     <!-- sidebar -->
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
 
@@ -41,7 +45,7 @@
     <div class="title w3-display-container">
         <button class="w3-button w3-xlarge w3-display-topleft menu-btn" style="margin:10px" onclick="openSideBar()">☰</button>
         <img class="w3-display-topleft" id="logo" style="margin-left:80px;margin-top: 10px" src="../img/logo.png" alt="" width="190px">
-        <h1 class="w3-xxxlarge w3-display-topmiddle">About Piano4Fun</h1>
+        <h1 data-aos"fade-left" class="w3-xxxlarge w3-display-topmiddle w3-text-black"><b>About Piano4Fun</b></h1>
     </div>
 
     <!-- <div class="w3-center fixed">
@@ -49,11 +53,11 @@
     </div> -->
     <div class="w3-center" style="margin-top:50px">
         <div class="w3-padding-large" style="width:75%;height:450px;margin-top:10px;display:inline-block">
-            <div class="w3-row">
+            <div class="w3-row" data-aos="fade-right">
                 <div class="about-content" style="margin-top:25px">
                     <img src="../img/piano-course-1.jpg" width="300px" alt="">
                 </div>
-                <div class="about-content">
+                <div class="about-content" >
                     <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie eleifend dolor, in egestas
                         purus feugiat eu. Nam ut tincidunt tortor, non bibendum nibh. Phasellus fermentum et neque ut convallis.
                         Aliquam hendrerit ut libero non tempus. Donec scelerisque ligula a ipsum aliquet accumsan. Vivamus
@@ -64,8 +68,8 @@
                         odio tempor lacus luctus, eu accumsan elit mattis.</p>
                 </div>
             </div>
-            <div class="w3-row">
-                <div class="about-content">
+            <div class="w3-row" data-aos="fade-left">
+                <div class="about-content"  >
                     <p style="text-align: justify">Donec arcu arcu, vulputate sed orci id, sagittis posuere urna. Pellentesque habitant morbi tristique
                         senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Orci varius natoque
                         penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus gravida accumsan justo.
@@ -85,6 +89,9 @@
 
 </html>
 <script>
+    AOS.init({
+        duration: 1200,
+    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");

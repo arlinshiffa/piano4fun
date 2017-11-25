@@ -6,11 +6,16 @@
     <link rel="stylesheet" href="../lib/w3.css">
     <script src="../lib/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <link rel="stylesheet" href="../style/gradient.css">
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <title>Piano4Fun | Play Mini Game </title>
 </head>
 
-<body>
+<body class="content-container">
     <div class="w3-padding-large" style="margin-left:60px;">
-        <img src="../img/logo.png" alt="" width="190px">
+            <a href="dashboard.html"><img src="../img/logo.png" alt="" width="190px"></a>
     </div>
     <div class="w3-center">
         <canvas id="head"></canvas>
@@ -18,7 +23,7 @@
             <p class="w3-xlarge" id="scoreLabel">
                 <b>Score:</b>
             </p>
-            <a class="w3-button w3-round" href="mini-game-home.html">Quit Game</a>
+            <a href="mini-game-home.html"><button class=" w3-round buttonBlack buttonMedium" >Quit Game</button></a>
         </div>
         <canvas id="main"></canvas>
         <div id="text-group">
@@ -75,7 +80,7 @@
         //set canvas size
         function resize() {
             canvas.attr("width", $(window).get(0).innerWidth - 200);
-            canvas.attr("height", 150);
+            canvas.attr("height", 190);
             head.attr("width", canvas.attr("width"));
             head.attr("height", 100);
         }

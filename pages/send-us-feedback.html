@@ -7,19 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <link rel="stylesheet" href="../style/gradient.css">
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <title>Piano4Fun | Feedback </title>
 </head>
 
-<body>
+<body class="content-container">
     <!--logo-->
     <div class="w3-padding-large" id="logo" style="margin-left:60px;">
         <img src="../img/logo.png" alt="" width="190px">
     </div>
     <div class="w3-center">
-        <h1 style="">Send Us Feedback</h1>
+        <h1 style=""><b>Send Us Feedback</b></h1>
     </div>
     <div id="feedback-content">
         <p style="margin-left:10px">Let us know how we can improve your experience using Piano4Fun</p>
@@ -48,7 +53,7 @@
                 <tr>
                     <td></td>
                     <td class="col2" style="text-align: right">
-                        <input type="submit" value="Submit" class="w3-button w3-round">
+                        <button class="buttonBlack buttonMedium">Submit</button>
                     </td>
                 </tr>
             </table>
@@ -95,6 +100,9 @@
 </html>
 
 <script>
+    AOS.init({
+        duration: 1200,
+    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");

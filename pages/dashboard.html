@@ -16,14 +16,15 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="icon" type="image/png" href="img/piano.png" />
+    <title>Piano4Fun | Dashboard </title>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
 
 </head>
 
 <body class="content-container">
-    <div class="blur" style="padding:0;width:100%"></div>
+   
     <!--rectangle menu-->
-    <div class="w3-container w3-row" style="margin-left:28%;float:left; margin-bottom:20px;">
+    <div class="w3-container w3-row"  style="margin-left:28%;float:left; margin-bottom:20px;">
         <div class="chart-container w3-container w3-border w3-card-4 w3-light-blue w3-col" style="margin-top:50px;width:800px">
             <div class="pr-chart-ctrl" style="">
                 <div class="pr-chart" data-percent="80">
@@ -54,14 +55,14 @@
             </div>
 
         </div>
-        <button class="w3-container w3-card w3-rest  w3-hover-opacity w3-light-blue" onclick="document.getElementById('progressModal').style.display='block'"
+        <button class="w3-container w3-card w3-rest  w3-hover-opacity w3-light-blue"  onclick="document.getElementById('progressModal').style.display='block'"
             style="height:232px;margin-top:50px;">
             <i class="fa fa-angle-right fa-4x" style="float:right;margin-top:px"></i>
         </button>
     </div>
 
     <div class="w3-row-padding" style="margin-left:28.5% ;">
-        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle  w3-light-blue" onclick="document.getElementById('settingModal').style.display='block'"
+        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle  w3-light-blue" data-aos="flip-right" onclick="document.getElementById('settingModal').style.display='block'"
             style="height:150px;width:190px;margin-right:20px;">
             <br>
             <br>
@@ -73,26 +74,24 @@
             </b>
 
         </div>
-        <div class=" w3-center w3-third w3-card-4 w3-hover-opacity rectangle  w3-light-blue" style="height:150px;width:400px;margin-right:20px;">
+        <div class=" w3-center w3-third w3-card-4 w3-hover-opacity rectangle  w3-light-blue" data-aos="flip-right"  onclick="window.location.href='virtual-piano.html';" style="height:150px;width:400px;margin-right:20px;">
             <br>
             <br>
-            <br>
-            <br>
-            <br>
+         
+    
             <i class=""></i>
             <b>
+                <img src="../img/piano.png" style="width:23%" alt="">
                 <h5 class="">
                     <b>Virtual Piano</b>
                 </h5>
             </b>
         </div>
-        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle w3-light-blue" style="height:150px;width:200px;">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class=" w3-center w3-third w3-card-4  w3-hover-opacity rectangle w3-light-blue" data-aos="flip-right"  onclick="window.location.href='mini-game-home.html';"  style="height:150px;width:200px;">
             <i class=""></i>
+            <br>
+            <br>
+            <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
             <b>
                 <h5 class="">
                     <b>Mini Game</b>
@@ -280,6 +279,9 @@
 
 </html>
 <script>
+      AOS.init({
+        duration: 1200,
+    })
     $(document).ready(function () {
         // Get the modal
         var setting = document.getElementById('settingModal');
