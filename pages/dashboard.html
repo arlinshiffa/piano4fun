@@ -7,91 +7,164 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/circle.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
+
+    <script src="../lib/jquery.easypiechart.min.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body class="">
 
-    <!-- sidebar -->
-    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+    <!--sidebar-->
+    <div class="w3-sidebar  w3-animate-left w3-bar-block " id="mySidebar" style="width:25%;display:block;z-index:5">
+        <div class="w3-container">
+            <!--logo-->
+            <img class="w3-padding-large" src="../img/logo.png" alt="" width="100%">
 
-    <!--overlay-->
-    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
-    </div>
-
-    <!--menu button-->
-    <div class="w3-padding menu-btn">
-        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
-    </div>
-
-        <h1 class="w3-xxxlarge">Contact Us</h1>
-    <!--logo-->
-        <img src="../img/logo.png" alt="" width="190px">
-    </div>
-
-    <div class="w3-center">
-            <h1>Contact Us</h1>
-    </div>
-    
-    <div class="">
-       
-        <div class="w3-display-middle w3-padding-large w3-card-4" style="width:75%;height:450px;margin-top:10px;">
-            <div class="w3-row">
-                <div class="w3-col s6 w3-padding w3-center" style="margin-top:85px;">
-                    <table class="w3-card w3-large w3-table w3-border w3-striped ">
-                        <tr>
-                            <td>
-                                <i class="fa fa-map-marker"></i>
-                            </td>
-                            <td>Jl. xxxx no. y, Bandung</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-facebook"></i>
-                            </td>
-                            <td>facebook.com/piano4Fun</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-twitter"></i>
-                            </td>
-                            <td>@music4fun</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-instagram"></i>
-                            </td>
-                            <td>@music4fun</td>
-                        </tr>
-                    </table>
+            <!--image-->
+            <center>
+                <div class="w3-card" style="width:80%">
+                    <img class="w3" src="../img/avatar.png" alt="photo profile" width="100%">
                 </div>
-                <div class="w3-col s6">
-                    <div id="googleMap" style="width:100%;height:400px;"></div>
+            </center>
+            <br>
 
-                    <script>
-                        function myMap() {
-                            var loc = { lat: -6.874913, lng: 107.605071 };
-                            var mapProp = {
-                                center: loc,
-                                zoom: 17,
-                            };
-                            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                            var marker = new google.maps.Marker({
-                                position: loc,
-                                map: map
-                            });
-                        }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-27vIE-1d_tV36nC-CDHuHDOTQH26V-Y&callback=myMap"></script>
+            <!--user's detail-->
+            <div class="">
+                <div class="w3-purple">
+                    <div class="w3-padding">
+                        Hello,
+                        <span id="username">SomeOne</span>!
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <!--level-->
+                    <div class="w3-half">
+                        <div class=" w3-padding w3-blue">
+                            <span style="font-size:11px;">Level</span>
+                            <br>
+                            <span id="level" style="font-size:20px;"> 0 </span>
+                            <br>
+                        </div>
+                    </div>
+                    <!--highscore-->
+                    <div class=" w3-half">
+                        <div class=" w3-container w3-padding w3-green">
+                            <span style="font-size:11px;">High Score</span>
+                            <br>
+                            <span id="highscore" style="font-size:20px;">267</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--video progress-->
+                <div class="w3-purple">
+                    <div class="w3-padding">
+                        Video played
+                        <div class="w3-row">
+                            <div class="w3-light-grey w3-rest" style="width:70%;float:left;">
+                                <div id="videoBar" class="w3-container w3-blue" style="height:20px;width:100%"></div>
+                            </div>
+                            <div class=" w3-quarter">
+                                <span style="margin-left:5px;" id="video">50</span>/100
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-book"></i> Sheet Music</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-envelope"></i> Send Us Feedback</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-users"></i> About Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-id-card-o"></i> Contact Us</a>
+            <a href="#" class="w3-bar-item w3-button w3-grey">
+                <i class="fa fa-power-off"></i> Sign Out</a>
+
+
+        </div>
+    </div>
+
+    <div class="w3-container w3-row" style="margin-left:28%;float:left; margin-bottom:20px;">
+        <div class="chart-container w3-container w3-border w3-card w3-grey w3-col" style="margin-top:50px;width:800px">
+            <div class="pr-chart-ctrl" style="">
+                <div class="pr-chart" data-percent="100">
+                    <i></i>
+                    <p>1</p>
                 </div>
             </div>
+            <div class="pr-chart-ctrl">
+                <div class="pr-chart" data-percent="100">
+                    <i></i>
+                    <p>2</p>
+                </div>
+
+            </div>
+            <div class="pr-chart-ctrl">
+                <div class="pr-chart" data-percent="100">
+                    <i></i>
+                    <p>3</p>
+                </div>
+
+            </div>
+            <div class="pr-chart-ctrl">
+                <div class="pr-chart" data-percent="20">
+                    <i></i>
+                    <p>4</p>
+                </div>
+
+            </div>
+
         </div>
-
-
+        <div class="w3-container w3-card w3-rest w3-grey w3-hover-opacity" style="height:232px;margin-top:50px;">
+            <i class="fa fa-angle-right fa-4x" style="float:right;margin-top:80px"></i>
+        </div>
     </div>
+
+    <div class="w3-row-padding" style="margin-left:28.5% ;">
+        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity" style="height:150px;width:190px;margin-right:20px;">
+            <br>
+            <br>
+            <i class="fa fa-cogs fa-5x"></i>
+            <b>
+                <h5 class="">Profile Setting</h5>
+            </b>
+        </div>
+        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity" style="height:150px;width:400px;margin-right:20px;">
+            <br><br><br><br><br>
+            <i class=""></i>
+            <b>
+                <h5 class="">Virtual Piano</h5>
+            </b>
+        </div>
+        <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity" style="height:150px;width:200px;">
+                <br><br><br><br><br>
+                <i class=""></i>
+                <b>
+                    <h5 class="">Mini Game</h5>
+                </b>
+        </div>
+    </div>
+    <br><br>
+    <div class="" style="margin-left:84.5%;">
+        <button class="buttonLarge buttonPurple w3-text-white">Start Course</button>
+    </div>
+   
+
+
+
 </body>
 
 </html>
@@ -100,4 +173,6 @@
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
     }
+
+
 </script>
