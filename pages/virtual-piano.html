@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>HTML5 JavaScript Piano - with Data URIs</title>
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" type="text/css" href="../lib/piano.css" />
+</head>
+
+<body>
+    <div id="title" style="text-align:center">
+        <h1 style="font-size: 300%">Virtual Piano</h1>
+    </div>
+    <div id="content">
+        <div id="content-inner">
+            <div id="piano">
+                <img id="logo" src="../img/logo.png" alt="" style="width:160px">
+                <div class="help show" tabindex="1">
+                    <i class="fa fa-cog fa-2x icon" aria-hidden="true"></i>
+                    <div class="help-inner">
+                        <div id="synth-settings"></div>
+                        <div class="opts">
+                            <p>
+                                <strong>Controls:</strong>
+                            </p>
+                            <p>play using home row &amp; above &nbsp; /</p>
+                            <p>change playable keys: “,” &amp; “.” &nbsp; /</p>
+                            <p>shift keyboard: ← &amp; →
+                                <span id="shift"></span>
+                            </p>
+                        </div>
+                        <div class="opts">
+                            <p>
+                                <strong>Extras:</strong>
+                            </p>
+                            <p class="toggle-color toggle hold">Color - c &nbsp; /</p>
+                            <p class="toggle-demo toggle">Demo - m &nbsp; /</p>
+                            <p class="toggle-animate toggle">Visual mode - 8 &nbsp; /</p>
+                            <p class="toggle-looper">Looper - 9 &nbsp; /</p>
+                            <p>Help - 0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loop" tabindex="2">
+                    <i class="fa fa-repeat fa-2x icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../lib/audio.js"></script>
+    <script src="../lib/piano.js"></script>
+
+    <!-- sidebar -->
+    <!-- <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe> -->
+
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
+</script>
