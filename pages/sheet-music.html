@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../lib/horizontal-scroll.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+
+<body class="">
+
+
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding menu-btn fixed">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+
+    <div class="w3-padding home-btn fixed">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!--logo-->
+    <div class="w3-padding-large fixed" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
+        <h1 class="w3-center">Sheet Music Collection</h1>
+    </div>
+
+    <div class="sheet-collection fixed scroll">
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+        <div class="w3-card sheet-container">
+            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+            <h3 class="w3-center">Fur Elise</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
+    AOS.init({
+        duration: 1200,
+    })
+
+    function goHome() {
+        window.location.href = "dashboard.html"
+    }
+
+    $(function() {
+        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+           // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+        $(window).resize(function() {
+          if ($(window).width() <= 768) {
+            elem.destroy();
+          }
+          else {
+            elem.reinitialize();
+          }
+        });
+    });
+</script>

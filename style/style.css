@@ -62,3 +62,21 @@
     bottom: 0;
     left: 0;
 }
+
+.sheet-container{
+    width: 200px;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.sheet-collection{
+    margin:0 10% 0 15%;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: fixed;
+    bottom: 20%;
+}
+
+.fixed{
+    position: fixed;
+}
