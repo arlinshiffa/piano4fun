@@ -63,3 +63,9 @@ canvas#head{
     top: 0;
     left: 0;
 }
+
+.home-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
