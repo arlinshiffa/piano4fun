@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/style2.css">
-    <link rel="stylesheet" href="../style/circle.css">
+    <link rel="stylesheet" href="../style/gradient.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
 
@@ -20,8 +20,8 @@
 
 </head>
 
-<body class="">
-
+<body class="content-container">
+    <div class="blur" style="padding:0;width:100%"></div>
     <!--rectangle menu-->
     <div class="w3-container w3-row" style="margin-left:28%;float:left; margin-bottom:20px;">
         <div class="chart-container w3-container w3-border w3-card w3-grey w3-col" style="margin-top:50px;width:800px">
@@ -67,7 +67,7 @@
             <br>
             <i class="fa fa-cogs fa-5x"></i>
             <b>
-                <h5 class="">Profile Setting</h5>
+                <h5 class=""><b>Profile Setting</b></h5>
             </b>
         </div>
         <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity rectangle" style="height:150px;width:400px;margin-right:20px;">
@@ -78,7 +78,7 @@
             <br>
             <i class=""></i>
             <b>
-                <h5 class="">Virtual Piano</h5>
+                <h5 class=""><b>Virtual Piano</b></h5>
             </b>
         </div>
         <div class=" w3-center w3-third w3-card w3-grey w3-hover-opacity rectangle" style="height:150px;width:200px;">
@@ -89,13 +89,15 @@
             <br>
             <i class=""></i>
             <b>
-                <h5 class="">Mini Game</h5>
+                <h5 class=""><b>Mini Game</b></h5>
             </b>
         </div>
     </div>
     <br>
     <div class="" style="margin-left:84.5%;">
-        <a href="level-home.html"><button class="buttonPurple buttonLarge  w3-text-white">Start Course</button></a>
+        <a href="level-home.html">
+            <button class="buttonPurple buttonLarge  w3-text-white">Start Course</button>
+        </a>
     </div>
     <br>
     <br>
@@ -252,27 +254,27 @@
                             <br>
                             <label for="">Confirm New Password :</label>
                             <input type="password" class="w3-input w3-border w3-animated-input" width="80%">
-                          
+
                         </form>
                         <br>
-                        
+
                     </div>
 
                 </div>
                 <div class="w3-padding-large">
-                        <span onclick="document.getElementById('settingModal').style.display='none'" class="w3-button w3-display-bottomleft w3-white">
-                                <i class="fa fa-arrow-left fa-3x"></i>
-                         </span>
+                    <span onclick="document.getElementById('settingModal').style.display='none'" class="w3-button w3-display-bottomleft w3-white">
+                        <i class="fa fa-arrow-left fa-3x"></i>
+                    </span>
                 </div>
 
                 <div class="w3-padding-large" style="margin-left:300px">
-                       <button class="buttonBlue buttonLarge ">Save</button>
-                       <button class="buttonBlue buttonMedium" style="margin-left:390px">reset</button>
-                      
+                    <button class="buttonBlue buttonLarge ">Save</button>
+                    <button class="buttonBlue buttonMedium" style="margin-left:390px">reset</button>
+
                 </div>
-               
-               
-            </div>  
+
+
+            </div>
         </div>
         <br>
         <br>
@@ -286,6 +288,5 @@
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
     }
-
 
 </script>

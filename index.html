@@ -12,15 +12,16 @@
     <script src="lib/jquery-3.2.1.js"></script>
     <link href="lib/aos.css" rel="stylesheet">
     <script src="lib/aos.js"></script>
-    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="icon" type="image/png" href="img/piano.png" />
+    <title>music4Fun</title>
 </head>
 
 <body class="content-container">
     <div class="blur" style="padding:0;width:100%"></div>
     <!--menu-->
-    <div class="w3-display-topright w3-padding" data-aos="fade-right">
-        <button class="buttonRed buttonMedium">about us</button>
-        <button class="buttonGreen buttonMedium">contact us</button>
+    <div class="w3-display-topright w3-padding " data-aos="fade-right">
+        <button class="buttonBlack buttonMedium w3-hover-text-purple">about this web</button>
+        <button class="buttonBlack buttonMedium w3-hover-text-blue">our contact </button>
     </div>
 
     <!--title-->
@@ -28,7 +29,7 @@
         <div class="w3-half logo w3-container" data-aos-anchor="#example-anchor" data-aos="flip-up" style="padding-right:1%;">
             <a class="w3-hover-opacity" href="">
                 <center>
-                    <img src="img/logo.png" alt="" width="340px">
+                    <img class="social-ico" src="img/logo.png" alt="" width="340px">
 
                 </center>
             </a>
@@ -36,7 +37,8 @@
             <br>
             <div class="w3-row">
                 <div style="" class="w3-half">
-                    <button class="buttonBlue buttonLarge" onclick="document.getElementById('signin').style.display='block'" style="margin-left:150px">SIGN IN</button>
+                    <button class="buttonBlack buttonLarge w3-hover-text-red" onclick="document.getElementById('signin').style.display='block'"
+                        style="margin-left:150px">SIGN IN</button>
                 </div>
                 <div style="" class="w3-half">
                     don't have an account?
@@ -48,7 +50,12 @@
         </div>
 
         <div class="w3-half w3-container" style="text-align:justify;padding-right:10%">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam vero adipisci reprehenderit veniam mollitia
+            <h5>
+                <b>The best new way to learn piano for kids</b>
+            </h5>
+            Learning with music4fun is easy and fun.
+            <br> Learn a lot of music's theory and play game to improve music's skill.
+            <br>
             <br>
             <br>
             <a>
@@ -71,7 +78,7 @@
                         <i class="fa fa-times-circle fa-2x"></i>
                     </span>
                     <h2>
-                        <B>SIGN IN</B>
+                        <B style="color:black;">SIGN IN</B>
                     </h2>
 
                     <form action="pages/dashboard.html">
@@ -79,10 +86,10 @@
                         <br>
                         <input class="w3-input w3-animate-input w3-border" style="width:50%" type="password" name="password" placeholder="password">
                         <br>
-                        <input type="submit" class="w3-button w3-round buttonBlue buttonMedium" onclick="test()" value="SIGN IN"></input>
+                        <input type="submit" class=" w3-round buttonBlack buttonMedium w3-hover-text-pale-red" onclick="test()" value="SIGN IN"></input>
                         <br>
                         <p>
-                            <a href="" style="color:blue;">Forgot password?</a>
+                            <a href="pages/forget-password.html" style="color:blue;">Forgot password?</a>
                         </p>
                     </form>
                 </div>
@@ -92,7 +99,7 @@
         <!--modal sign up-->
         <div id="signup" class="w3-modal">
             <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
-                <div class="w3-container modalContainer ">
+                <div class="w3-container modalContainer " style="color:black;">
                     <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">
                         <i class="fa fa-times-circle fa-2x"></i>
                     </span>
@@ -122,7 +129,8 @@
                     <label for="">Your Child's Birthday:</label>
                     <input class="w3-input w3-animate-input w3-border" style="width:70%" type="date" name="birth">
                     <br>
-                    <button class="w3 buttonBlue buttonMedium" style="width:100%">Create Account</button>
+                    <button class="w3 buttonBlack w3-hover-text-blue buttonMedium" onclick="document.getElementById('modalakun').style.display='block'; document.getElementById('signup').style.display='none' "
+                        style="width:100%">Create Account</button>
                     <br>
                     <p>
                         *By Joining, you agree to Our
@@ -131,6 +139,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- The Modal feedback sign up -->
+        <div id="modalakun" class="w3-modal">
+            <div class="w3-modal-content w3-animate-left w3-text-black" style="width:50%">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('modalakun').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div class="w3-center">
+                        <br>
+                        <h2>Thank you for joining us! Please check your email</h2>
+                        <h2>
+                            <i class="fa fa-handshake-o"></i>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

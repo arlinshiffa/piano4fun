@@ -114,7 +114,7 @@ button{
 
 .buttonBlack{
     box-shadow: 0 5px 0 rgb(0, 0, 0) ;
-    background: rgb(34, 34, 34);
+    background: rgb(36, 36, 36);
     font-weight:bold;
     color:white;
 }
@@ -195,5 +195,5 @@ margin-bottom:50px;
 }
 
 .social-ico:hover{
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
