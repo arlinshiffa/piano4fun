@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -15,6 +16,17 @@
 
 <body class="">
 
+    <div class="w3-display-middle" style="width:70%">
+        <div class="w3-left w3-padding-medium" style="width:67%">
+            <h1 class="w3-xxxlarge">Guess The Note</h1>
+            <h2>Rules:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo varius est. Morbi risus est, dignissim ut nisi fermentum, vestibulum lobortis erat. Nam libero ipsum, commodo ut mauris vel, scelerisque aliquet dolor. Etiam fermentum rhoncus orci vitae sagittis. Aliquam tincidunt mollis ligula, vitae fringilla ex ullamcorper eget. Integer eget pharetra quam. Curabitur fringilla est eu urna tincidunt rhoncus.</p>
+        </div>
+        <div class="w3-left w3-padding-medium w3-center" style="width:33%;margin-top:10%">
+            <a class="w3-button w3-large buttonBlue w3-round" href="mini-game-start.html">Start Game</a>
+            <h3>High Score:0</h3>
+        </div>
+    </div>
     <!-- sidebar -->
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
 
@@ -28,7 +40,9 @@
     </div>
 
     <div class="w3-padding home-btn">
-        <button class="w3-button w3-xlarge" onclick="goHome()"><i class="fa fa-home" aria-hidden="true"></i></button>
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
     </div>
 </body>
 
@@ -39,7 +53,7 @@
         $("#myOverlay").toggleClass("w3-show");
     }
 
-    function goHome(){
-        window.location.href="dashboard.html"
+    function goHome() {
+        window.location.href = "dashboard.html"
     }
 </script>

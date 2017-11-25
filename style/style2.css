@@ -34,10 +34,10 @@ button{
 }
 
 .buttonBlue:hover{
-    box-shadow: 0 2px 0 #127baf;
+    box-shadow: 0 2px 0 #127baf !important;
     transform: translateY(3px);
-    background: black;
-    color:#127baf;
+    background: #095f86 !important;
+    color:#96c8df !important;
   }
 
 .buttonRed{
