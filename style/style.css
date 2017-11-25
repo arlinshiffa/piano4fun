@@ -80,3 +80,8 @@
 .fixed{
     position: fixed;
 }
+
+.level-element{
+    width: 50%;
+    display: inline-block;
+}

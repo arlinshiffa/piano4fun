@@ -15,7 +15,6 @@ body{
 }
 
 a:hover{
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -124,7 +123,7 @@ button{
 }
 
 #link:hover{
-    cursor: pointer;
+    font-weight: bold;
 }
 
 #link{

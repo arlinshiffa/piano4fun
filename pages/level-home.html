@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/style2.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
-    <script src="../lib/jquery-3.2.1.js"></script>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" type="text/css" href="../lib/jquery.pagepiling.css" />
-	<link rel="stylesheet" type="text/css" href="../lib/examples.css" />
+    <link rel="stylesheet" type="text/css" href="../style/course.css" />
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script type="text/javascript" src="../lib/jquery.pagepiling.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -23,11 +23,11 @@
             $('#pagepiling').pagepiling({
                 direction: 'horizontal',
                 menu: '#menu',
-                anchors: ['page1', 'page2', 'page3', 'page4'],
+                anchors: ['tutorial', 'level1', 'level2', 'level3', 'level4'],
                 sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
                 navigation: {
                     'position': 'right',
-                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+                    'tooltips': ['Tutorial', 'Level 1', 'Level 2', 'Level 3', 'Level 4']
                 },
                 afterRender: function () {
                     $('#pp-nav').addClass('custom');
@@ -65,16 +65,6 @@
             right: 0;
         }
 
-        #colors2 {
-            background-image: url(imgs/colors2.gif);
-            top: 0;
-        }
-
-        #colors3 {
-            background-image: url(imgs/colors3.gif);
-            bottom: 0;
-        }
-
 
         /* Overwriting fullPage.js tooltip color
 	* --------------------------------------- */
@@ -88,56 +78,139 @@
 
 <body>
     <ul id="menu">
-        <li data-menuanchor="page1" class="active">
-            <a href="#page1">Page 1</a>
+        <li data-menuanchor="tutorial" class="active">
+            <a href="#tutorial">Tutorial</a>
         </li>
-        <li data-menuanchor="page2">
-            <a href="#page2">Page 2</a>
+        <li data-menuanchor="level1" class="active">
+            <a href="#level1">Level 1</a>
         </li>
-        <li data-menuanchor="page3">
-            <a href="#page3">Page 3</a>
+        <li data-menuanchor="level2">
+            <a href="#level2">Level 2</a>
+        </li>
+        <li data-menuanchor="level3">
+            <a href="#level3">Level 3</a>
+        </li>
+        <li data-menuanchor="level4">
+            <a href="#level4">Level 4</a>
         </li>
     </ul>
 
 
     <div id="pagepiling">
-        <div class="section" id="section1">
-            <img src="imgs/pagePiling-plugin.gif" alt="pagePiling" />
-            <br />
+        <div class="section w3-center" id="section1">
+            <a href="" class="w3-card w3-hover-shadow level-element w3-display-container">
+                <div class="w3-padding-medium">
+                    <h1>Tutorial</h1>
+                    <div style="width:80%;display: inline-block">
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo
+                            varius est
+                        </p>
+                        <img src="" style="width:100px;height:100px" alt="img">
+                        <span class="w3-button w3-display-bottomright w3-white" style="margin:3px">
+                            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                        </span>
 
-            <h1>Horizontal Scroll</h1>
-            <p>pagePiling does it easy for you!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="section w3-center" id="section2">
+            <a href="" class="w3-card w3-hover-shadow level-element w3-display-container">
+                <div class="w3-padding-medium">
+                    <h1>Level 1</h1>
+                    <div style="width:80%;display: inline-block">
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo
+                            varius est
+                        </p>
+                        <img src="" style="width:100px;height:100px" alt="img">
+                        <span class="w3-button w3-display-bottomright w3-white" style="margin:3px">
+                            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="section w3-center" id="section3">
+            <a href="" class="w3-card w3-hover-shadow level-element w3-display-container">
+                <div class="w3-padding-medium">
+                    <h1>Level 2</h1>
+                    <div style="width:80%;display: inline-block">
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo
+                            varius est
+                        </p>
+                        <img src="" style="width:100px;height:100px" alt="img">
+                        <span class="w3-button w3-display-bottomright w3-white" style="margin:3px">
+                            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                        </span>
 
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="section">
-            <div class="intro">
-                <h1>Simple to use</h1>
-                <p>Just use the option direction: 'horizontal' to have it working!</p>
-            </div>
+        <div class="section w3-center" id="section4">
+            <a href="" class="w3-card w3-hover-shadow level-element w3-display-container">
+                <div class="w3-padding-medium">
+                    <h1>Level 3</h1>
+                    <div style="width:80%;display: inline-block">
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo
+                            varius est
+                        </p>
+                        <img src="" style="width:100px;height:100px" alt="img">
+                        <span class="w3-button w3-display-bottomright w3-white" style="margin:3px">
+                            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="section" id="section3">
-            <div class="intro">
-                <h1>Isn't it great?</h1>
-                <p>Just as you expected!</p>
-                <div id="colors2"></div>
-                <div id="colors3"></div>
-            </div>
+        <div class="section w3-center" id="section5">
+            <a href="" class="w3-card w3-hover-shadow level-element w3-display-container">
+                <div class="w3-padding-medium">
+                    <h1>Level 4</h1>
+                    <div style="width:80%;display: inline-block">
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo
+                            varius est
+                        </p>
+                        <img src="" style="width:100px;height:100px" alt="img">
+                        <span class="w3-button w3-display-bottomright w3-white" style="margin:3px">
+                            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 
     <!-- sidebar -->
-    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:100" class="w3-hide w3-animate-left"></iframe>
 
     <!--overlay-->
-    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:99" id="myOverlay">
     </div>
 
     <!--menu button-->
-    <div class="w3-padding menu-btn">
+    <div class="w3-padding menu-btn" style="z-index:99">
         <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
     </div>
 
-    <div class="w3-padding home-btn">
+    <div class="w3-padding home-btn" style="z-index:99">
         <button class="w3-button w3-xlarge" onclick="goHome()">
             <i class="fa fa-home" aria-hidden="true"></i>
         </button>
