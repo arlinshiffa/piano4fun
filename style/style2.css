@@ -18,6 +18,10 @@ a:hover{
     cursor: pointer;
 }
 
+.rectangle:hover{
+     cursor: pointer;
+}
+
 /* style button */
 button{
     border: 0;
