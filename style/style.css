@@ -1,8 +1,8 @@
-canvas#main{
-}
-
-canvas#head{
-
+#logo{
+    position: absolute;
+    left:100px;
+    top: 0;
+    display: inline-block;
 }
 
 .game-input{
