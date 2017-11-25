@@ -30,14 +30,40 @@
 
     <!-- home button -->
     <div class="w3-padding home-btn">
-        <button class="w3-button w3-xlarge" onclick="goHome()">
-            <i class="fa fa-home" aria-hidden="true"></i>
+        <button class="w3-button w3-xlarge" onclick="goBack()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
     </div>
 
     <!--logo-->
     <div class="w3-padding-large" id="logo" style="margin-left:60px;">
         <img src="../img/logo.png" alt="" width="190px">
+    </div>
+
+    <div class="w3-center">
+        <h1 class="w3-xxxlarge">First 3 Notes</h1>
+    </div>
+    <div class="w3-center" style="width: 100%">
+        <div style="margin-left:20%;margin-right:20%">
+            <div>
+                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt est ligula, ac blandit magna malesuada
+                    ut. Quisque tempor eros vitae nibh elementum pretium. Ut gravida urna velit, ac aliquet nulla luctus
+                    dictum. Vestibulum scelerisque rhoncus tincidunt. Donec lacinia arcu ac commodo lacinia. Maecenas suscipit
+                    lacinia leo eu pellentesque. Phasellus mattis scelerisque purus, id pharetra lacus faucibus sit amet.
+                    Nunc id laoreet est. Etiam ante erat, fringilla at varius vitae, ultricies non dolor. Praesent fermentum
+                    eget neque a aliquet. Integer dignissim ultricies lectus, sit amet porta tortor fringilla nec. In massa
+                    ligula, congue nec nisi eu, tristique tempus risus. Vestibulum cursus metus sed suscipit sagittis.</p>
+                <img src="../img/theory-img.png" style="display: inline-block;float: left" width="250px" alt="">
+            </div>
+            <p style="text-align:justify">In id lacus ac justo finibus varius. Aenean fermentum, ligula vitae dictum viverra, orci libero vestibulum leo,
+                faucibus rutrum dui tellus et lacus. Etiam dapibus, nunc at placerat cursus, sapien dolor ultricies velit,
+                efficitur accumsan lectus felis vel quam. Aenean commodo dui in mattis viverra. Vivamus eu quam a justo ultricies
+                elementum vel ut eros. Ut placerat pulvinar diam, nec varius augue condimentum in. Vestibulum a sollicitudin
+                turpis. Quisque sodales convallis facilisis. Proin pharetra dignissim ex, eget ullamcorper lacus molestie
+                eget. Praesent ultricies, nunc quis consequat rhoncus, eros purus varius odio, sit amet mollis eros ligula
+                at est. Nam in finibus dui.</p>
+
+        </div>
     </div>
 
 </body>
@@ -49,10 +75,10 @@
         $("#myOverlay").toggleClass("w3-show");
         $(".menu-btn").toggleClass("w3-hide");
         $(".home-btn").toggleClass("w3-hide");
-        $("#logo").css("opacity",$("#logo").css("opacity")=='1'?0:1);
+        $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
     }
-    function goHome() {
-        window.location.href = "dashboard.html"
+    function goBack() {
+        window.location.href = "tutorial.html"
     }
     AOS.init({
         duration: 1200,
