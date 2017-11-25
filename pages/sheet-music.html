@@ -26,58 +26,60 @@
     </div>
 
     <!--menu button-->
-    <div class="w3-padding menu-btn fixed">
+    <div class="w3-padding menu-btn">
         <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
     </div>
 
-    <div class="w3-padding home-btn fixed">
+    <div class="w3-padding home-btn">
         <button class="w3-button w3-xlarge" onclick="goHome()">
             <i class="fa fa-home" aria-hidden="true"></i>
         </button>
     </div>
 
     <!--logo-->
-    <div class="w3-padding-large fixed" style="margin-left:60px;">
+    <div class="w3-padding-large" style="margin-left:60px;">
         <img src="../img/logo.png" alt="" width="190px">
         <h1 class="w3-center">Sheet Music Collection</h1>
     </div>
 
-    <div class="sheet-collection fixed scroll">
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
-        </div>
-        <div class="w3-card sheet-container">
-            <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
-            <h3 class="w3-center">Fur Elise</h3>
+    <div class="sheet-collection" id="b">
+        <div id="container">
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
+            <div class="w3-card sheet-container">
+                <img src="../img/fur-elise-sheet.gif" alt="" width="200px">
+                <h3 class="w3-center">Fur Elise</h3>
+            </div>
         </div>
     </div>
 
@@ -85,6 +87,10 @@
 
 </html>
 <script>
+    $(document).ready(function(){
+        var elements=$(".sheet-container");
+        $("#container").css("width",(50+200)*elements.length);
+    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
@@ -97,21 +103,29 @@
         window.location.href = "dashboard.html"
     }
 
-    $(function() {
-        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
-            {
-           // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                console.log(percent);
-            }
-        });
-        $(window).resize(function() {
-          if ($(window).width() <= 768) {
-            elem.destroy();
-          }
-          else {
-            elem.reinitialize();
-          }
-        });
-    });
+    var scroller = {};
+    scroller.e = document.getElementById("b");
+
+    if (scroller.e.addEventListener) {
+        scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+        scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+    } else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+    function MouseWheelHandler(e) {
+        // cross-browser wheel delta
+        var e = window.event || e;
+        var delta = - 20 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+        var pst = $('#b').scrollLeft() + delta;
+
+        if (pst < 0) {
+            pst = 0;
+        } else if (pst > $('.img_holder').width()) {
+            pst = $('.img_holder').width();
+        }
+
+        $('#b').scrollLeft(pst);
+
+        return false;
+    }
 </script>
