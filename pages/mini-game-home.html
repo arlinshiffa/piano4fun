@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="../style/gradient.css">
     <link rel="icon" type="image/png" href="../img/piano.png" />
     <title>Piano4Fun | Mini Game </title>
-    
+
 </head>
 
 <body class="content-container">
     <!--logo-->
     <div class="blur" style="padding:0;width:100%"></div>
     <div class="w3-padding-large" id="logo" style="margin-left:60px;">
-        <a href="dashboard.html"><img src="../img/logo.png" alt="" width="190px"></a>
+        <a href="dashboard.html">
+            <img src="../img/logo.png" alt="" width="190px">
+        </a>
     </div>
 
     <div class="w3-row" style="width:70%;margin-left: 20%;margin-top:5%">
@@ -36,7 +38,8 @@
                 tincidunt rhoncus.</p>
         </div>
         <div class="w3-left w3-padding-medium w3-center" style="width:33%;margin-top:10%" data-aos-anchor="#example-anchor" data-aos="fade-left">
-            <button onclick ="window.location.href='mini-game-start.html';"class="w3-hover-text-blue w3-large buttonBlack buttonLarge w3-round" href="mini-game-start.html">Start Game</button>
+            <button onclick="window.location.href='mini-game-start.html';" class="w3-hover-text-blue w3-large buttonBlack buttonLarge w3-round"
+                href="mini-game-start.html">Start Game</button>
             <h3>High Score: 0</h3>
         </div>
     </div>
@@ -51,6 +54,13 @@
     <div class="w3-padding menu-btn">
         <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
     </div>
+    
+    <!-- home button -->
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
 </body>
 
 </html>
@@ -60,7 +70,7 @@
         $("#myOverlay").toggleClass("w3-show");
         $(".menu-btn").toggleClass("w3-hide");
         $(".home-btn").toggleClass("w3-hide");
-        $("#logo").css("opacity",$("#logo").css("opacity")=='1'?0:1);
+        $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
     }
     function goHome() {
         window.location.href = "dashboard.html"
