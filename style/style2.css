@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans' !important;
     overflow-y: hidden;
 }
 
@@ -196,6 +196,7 @@ margin-bottom:50px;
 
 .social-ico:hover{
     transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .opacity{
