@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+
+<body class="">
+    <!--logo-->
+    <div class="w3-padding-large" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
+
+    <div class="w3-display-middle" style="width:70%">
+        <div class="w3-left w3-padding-medium" style="width:67%">
+            <h1 class="w3-xxxlarge">Guess The Note</h1>
+            <h2>Rules:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros nibh, congue eget nibh eu, commodo varius
+                est. Morbi risus est, dignissim ut nisi fermentum, vestibulum lobortis erat. Nam libero ipsum, commodo ut
+                mauris vel, scelerisque aliquet dolor. Etiam fermentum rhoncus orci vitae sagittis. Aliquam tincidunt mollis
+                ligula, vitae fringilla ex ullamcorper eget. Integer eget pharetra quam. Curabitur fringilla est eu urna
+                tincidunt rhoncus.</p>
+        </div>
+        <div class="w3-left w3-padding-medium w3-center" style="width:33%;margin-top:10%">
+            <a class="w3-button w3-large buttonBlue w3-round" href="mini-game-start.html">Start Game</a>
+            <h3>High Score:0</h3>
+        </div>
+    </div>
+    <!-- sidebar -->
+    <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
+
+    <!--overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
+    </div>
+
+    <!--menu button-->
+    <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+
+    <!--logo-->
+    <div class="w3-padding-large" style="margin-left:60px">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
+    <br>
+
+    <div class="w3-row">
+        <div class="w3-half w3-container" data-aos-anchor="#example-anchor" data-aos="fade-right" style="padding-right:2%;padding-left:20%;">
+            <h1>Game's Name</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, hic quidem voluptatibus in quos repudiandae
+                est alias explicabo officiis dolorem voluptatum quasi debitis! Sed quaerat dolor a quae accusamus doloremque?
+            </p>
+            <p>
+                rules:
+                <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore nulla cumque. Molestiae atque
+                deleniti modi, tempore numquam soluta provident vero et perspiciatis. At animi adipisci, dignissimos vel
+                ducimus facere.
+            </p>
+        </div>
+
+        <div class="w3-half w3-container" style="text-align:justify;padding-right:10%">
+            <button class="buttonBlue buttonLarge" style="margin-left:150px">PLAY!</button>
+
+        </div>
+</body>
+
+</html>
+<script>
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+    }
+    AOS.init({
+        duration: 1200,
+    })
+</script>
