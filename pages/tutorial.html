@@ -36,34 +36,40 @@
 
     <!-- home button -->
     <div class="w3-padding home-btn">
-        <button class="w3-button w3-xlarge" onclick="goHome()">
-            <i class="fa fa-home" aria-hidden="true"></i>
+        <button class="w3-button w3-xlarge" onclick="goBack()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
     </div>
 
     <!--logo-->
     <div class="w3-padding-large" id="logo" style="margin-left:60px;">
         <img src="../img/logo.png" alt="" width="190px">
-        <h1 class="w3-center" data-aos="fade-in"><b>Tutorial</b></h1>
+        <h1 class="w3-center" data-aos="fade-in">
+            <b>Tutorial</b>
+        </h1>
     </div>
 
     <div id="scroll" class="h-scroll tutorial-content">
         <div id="container">
-            <div  data-aos="flip-down" onclick="window.location.href='music-theory.html'" class="w3-circle w3-center w3-border circle">
+            <div data-aos="flip-down" onclick="window.location.href='music-theory.html'" class="w3-circle w3-center circle">
                 <h3 class="circle-content">First 3 Notes</h3>
+                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
             </div>
-            <div  data-aos="flip-down" class="w3-circle w3-center w3-border circle">
+            <div data-aos="flip-down" class="w3-circle w3-center circle">
                 <h3 class="circle-content">F,G</h3>
+                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
             </div>
-            <div  data-aos="flip-down"  class="w3-circle w3-center w3-border circle">
-                <h3 class="circle-content">Right Hand Practice</h3>
+            <div data-aos="flip-down" class="w3-circle w3-center circle">
+                <h3 class="circle-content" style="margin-top: 25%;">Right Hand Practice</h3>
+                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
             </div>
-            <div data-aos="flip-right" onclick="window.location.href='video-player.html'" class="w3-circle w3-center w3-border circle">
+            <div data-aos="flip-right" onclick="window.location.href='video-player.html'" class="w3-circle w3-center circle">
                 <h3 class="circle-content">Fur Elise</h3>
                 <i class="fa fa-video-camera fa-2x" aria-hidden="true"></i>
             </div>
-            <div  data-aos="flip-down"class="w3-circle w3-center w3-border circle">
+            <div data-aos="flip-down" class="w3-circle w3-center circle">
                 <h3 class="circle-content">What's Next</h3>
+                <i class="fa fa-play fa-2x" aria-hidden="true"></i>
             </div>
         </div>
     </div>
@@ -81,10 +87,10 @@
         $("#myOverlay").toggleClass("w3-show");
         $(".menu-btn").toggleClass("w3-hide");
         $(".home-btn").toggleClass("w3-hide");
-        $("#logo").css("opacity",$("#logo").css("opacity")=='1'?0:1);
+        $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
     }
-    function goHome() {
-        window.location.href = "dashboard.html"
+    function goBack() {
+        window.location.href = "level-home.html"
     }
     AOS.init({
         duration: 1200,

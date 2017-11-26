@@ -15,7 +15,9 @@
 
 <body class="content-container">
     <div class="w3-padding-large" style="margin-left:60px;">
-            <a href="dashboard.html"><img src="../img/logo.png" alt="" width="190px"></a>
+        <a href="dashboard.html">
+            <img src="../img/logo.png" alt="" width="190px">
+        </a>
     </div>
     <div class="w3-center">
         <canvas id="head"></canvas>
@@ -23,7 +25,9 @@
             <p class="w3-xlarge" id="scoreLabel">
                 <b>Score:</b>
             </p>
-            <a href="mini-game-home.html"><button class=" w3-round buttonBlack buttonMedium" >Quit Game</button></a>
+            <a href="mini-game-home.html">
+                <button class=" w3-round buttonBlack buttonMedium">Quit Game</button>
+            </a>
         </div>
         <canvas id="main"></canvas>
         <div id="text-group">
@@ -45,6 +49,26 @@
             <button class="w3-button w3-round game-button">G</button>
         </div>
     </div>
+
+    <!--modal game over-->
+    <div id="gameover" class="w3-modal">
+        <div class="w3-modal-content  w3-animate-right loginmodal " style="width:400px">
+            <div class="w3-container modalContainer " align="center">
+                <h2>
+                    <B style="color:black;">GAME OVER!</B>
+                </h2>
+                <h3 style="color:black">Score:
+                    <span id="end-score"></span>
+                </h3>
+                <a href="mini-game-home.html">
+                    <button class=" w3-round buttonBlack buttonMedium">Quit Game</button>
+                </a>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     $(document).ready(function () {
@@ -61,7 +85,7 @@
 
         //start game
         function startGame() {
-            $("#inp0").toggleClass("w3-border-blue");
+            $("#inp0").toggleClass("w3-border-blue thick w3-border");
             cur = 0;
             score = 0;
             life = 3;
@@ -80,9 +104,9 @@
         //set canvas size
         function resize() {
             canvas.attr("width", $(window).get(0).innerWidth - 200);
-            canvas.attr("height", 190);
+            canvas.attr("height", 150);
             head.attr("width", canvas.attr("width"));
-            head.attr("height", 100);
+            head.attr("height", 70);
         }
         resize();
 
@@ -130,9 +154,12 @@
         //spawn notes
         var ct = 0;
         var notes = []; //0=D,1=E,2=F,3=G,4=H,5=I,6=J
-        for (var i = 0; i < 6; i++) {
-            notes[i] = Math.floor(Math.random() * 7);
+        function random() {
+            for (var i = 0; i < 6; i++) {
+                notes[i] = Math.floor(Math.random() * 7);
+            }
         }
+        random();
         var hPos = [0.08, 0.073, 0.063, 0.056, 0.047, 0.088, 0.08];
         var drawNotes = function (ct) {
             var img2 = new Image();
@@ -159,14 +186,27 @@
         $(".game-button").on("click", function () {
             if (isValid($(this).html())) {
                 $("#inp" + cur).val($(this).html());
-                $("#inp" + (cur++)).toggleClass("w3-border-blue");
-                $("#inp" + cur).toggleClass("w3-border-blue");
+                $("#inp" + (cur++)).toggleClass("w3-border-blue thick w3-border");
+                $("#inp" + cur).toggleClass("w3-border-blue thick w3-border");
                 score += 100;
                 setScore();
+                if (cur == 6) {
+                    cur = 0;
+                    random();
+                    drawCanvas();
+                    for (var i = 0; i < 6; i++) {
+                        $("#inp" + i).val("");
+                    }
+                    $("#inp" + cur).toggleClass("w3-border-blue thick w3-border");
+                }
             } else {
                 life--;
                 console.log(life);
                 drawHead();
+                if (life == 0) {
+                    document.getElementById("gameover").style.display = 'block';
+                    $("#end-score").html(score);
+                }
             }
         })
 
