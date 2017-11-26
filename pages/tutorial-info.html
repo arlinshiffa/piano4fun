@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
     <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <link rel="icon" type="image/png" href="../img/piano.png" />
-    <link rel="stylesheet" href="../style/gradient.css">
-    <title>Piano4Fun | About </title>
+    <title>Piano4Fun | Tutorial </title>
     <link rel="icon" type="image/png" href="../img/piano.png" />
 </head>
 
-<body class="content-container">
+<body class="">
+
     <!-- sidebar -->
     <iframe src="sidebar.html" id="sidebar" frameborder="0" style="z-index:2" class="w3-hide w3-animate-left"></iframe>
 
@@ -25,20 +25,29 @@
     <div class="w3-overlay w3-animate-opacity" onclick="openSideBar()" style="cursor:pointer;z-index:1" id="myOverlay">
     </div>
 
+    <!--menu button-->
+    <div class="w3-padding menu-btn">
+        <button class="w3-button w3-xlarge" onclick="openSideBar()">☰</button>
+    </div>
+
     <!-- home button -->
     <div class="w3-padding home-btn">
-        <button class="w3-button w3-xlarge" onclick="goHome()">
-            <i class="fa fa-home" aria-hidden="true"></i>
-        </button>
+            <button class="w3-button w3-xlarge" onclick="goBack()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    <!--logo-->
+    <div class="w3-padding-large" id="logo" style="margin-left:60px;">
+        <img src="../img/logo.png" alt="" width="190px">
     </div>
+
 
     <div class="w3-center" style="margin-top:50px;">
         <div class="w3-padding-large" style="width:75%;height:450px;margin-top:10px;display:inline-block">
             <div class="w3-row" data-aos="fade-right">
-                <div class="about-content" style="margin-top:25px">
-                    <img src="../img/piano-course-1.jpg" width="300px" alt="">
-                </div>
-                <div class="about-content">
+                <h1 style="text-align: left !important" class="w3-xxxlarge">Tutorial</h1>
+                <div>
                     <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie eleifend dolor, in egestas
                         purus feugiat eu. Nam ut tincidunt tortor, non bibendum nibh. Phasellus fermentum et neque ut convallis.
                         Aliquam hendrerit ut libero non tempus. Donec scelerisque ligula a ipsum aliquet accumsan. Vivamus
@@ -49,38 +58,13 @@
                         odio tempor lacus luctus, eu accumsan elit mattis.</p>
                 </div>
             </div>
-            <div class="w3-row" data-aos="fade-left">
-                <div class="about-content">
-                    <p style="text-align: justify">Donec arcu arcu, vulputate sed orci id, sagittis posuere urna. Pellentesque habitant morbi tristique
-                        senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Orci varius natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus gravida accumsan justo.
-                        Etiam lacinia maximus risus et vestibulum. Phasellus convallis tellus felis, sed tempus justo varius
-                        eget. Sed orci risus, eleifend a purus sit amet, vehicula sollicitudin tellus. Vivamus molestie sapien
-                        at vehicula gravida. Cras sit amet finibus leo, sit amet imperdiet est. Proin posuere odio molestie
-                        nulla congue, bibendum consequat massa sagittis. Morbi et purus sed eros mollis vulputate. Praesent
-                        eget turpis ipsum.</p>
-                </div>
-                <div class="about-content" style="margin-top:25px">
-                    <img src="../img/piano-course-2.jpg" width="300px" alt="">
-                </div>
-            </div>
         </div>
     </div>
 
-    <div class="title w3-display-container">
-        <button class="w3-button w3-xlarge w3-display-topleft menu-btn" style="margin:10px" onclick="openSideBar()">☰</button>
-        <img class="w3-display-topleft" id="logo" style="margin-left:80px;margin-top: 10px" src="../img/logo.png" alt="" width="190px">
-        <h1 data-aos "fade-left" class="w3-xxxlarge w3-display-topmiddle w3-text-black">
-            <b>About Piano4Fun</b>
-        </h1>
-    </div>
 </body>
 
 </html>
 <script>
-    AOS.init({
-        duration: 1200,
-    })
     function openSideBar() {
         $("#sidebar").toggleClass("w3-hide");
         $("#myOverlay").toggleClass("w3-show");
@@ -88,7 +72,10 @@
         $(".home-btn").toggleClass("w3-hide");
         $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
     }
-    function goHome() {
-        window.location.href = "dashboard.html"
+    function goBack() {
+        window.location.href = "level-home.html"
     }
+    AOS.init({
+        duration: 1200,
+    })
 </script>
