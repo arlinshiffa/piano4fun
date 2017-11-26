@@ -149,6 +149,7 @@
     margin: 10px 0;
     margin-right: 40px;
     display: inline-block;
+    border: 4px solid white;
 }
 
 .circle:hover{
