@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+    <link rel="stylesheet" href="../style/gradient.css">
+    <title>Piano4Fun | Contact </title>
+    <link rel="icon" type="image/png" href="../img/piano.png" />
+
+</head>
+
+<body class="content-container">
+
+    <!--logo-->
+    <div class="w3-padding-large" id="logo" style="margin-left:60px">
+        <img src="../img/logo.png" alt="" width="190px">
+    </div>
+    <br>
+
+    <!-- home button -->
+    <div class="w3-padding home-btn">
+        <button class="w3-button w3-xlarge" onclick="goHome()">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div class="w3-display-middle w3-padding-large w3-card-4 w3-text-black opacity" style="width:75%;height:450px;margin-top:10px;">
+        <div class="w3-center ">
+            <h1 class="w3-text-black">
+                <b>Contact Piano4Fun</b>
+            </h1>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col s6 w3-padding w3-center" style="margin-top:30px;">
+                <table class="w3-card w3-medium w3-table w3-border w3-striped " data-aos="zoom-in-down">
+                    <tr>
+                        <td>
+                            <i class="fa fa-map-marker"></i>
+                        </td>
+                        <td>Jalan Ciumbuleuit No. 94, Hegarmanah, Cidadap, Hegarmanah, Cidadap, Kota Bandung, Jawa Barat 40141
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-facebook"></i>
+                        </td>
+                        <td>facebook.com/piano4Fun</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-twitter"></i>
+                        </td>
+                        <td>@music4fun</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-instagram"></i>
+                        </td>
+                        <td>@music4fun</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="w3-col s6">
+                <div id="googleMap" style="width:85%;height:300px;margin-top:30px;"></div>
+
+                <script>
+                    function myMap() {
+                        var loc = { lat: -6.874913, lng: 107.605071 };
+                        var mapProp = {
+                            center: loc,
+                            zoom: 17,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                        var marker = new google.maps.Marker({
+                            position: loc,
+                            map: map
+                        });
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-27vIE-1d_tV36nC-CDHuHDOTQH26V-Y&callback=myMap"></script>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    function openSideBar() {
+        $("#sidebar").toggleClass("w3-hide");
+        $("#myOverlay").toggleClass("w3-show");
+        $(".menu-btn").toggleClass("w3-hide");
+        $(".home-btn").toggleClass("w3-hide");
+        $("#logo").css("opacity", $("#logo").css("opacity") == '1' ? 0 : 1);
+    }
+    function goHome() {
+        window.location.href = "../index.html"
+    }
+    AOS.init({
+        duration: 1200,
+    })
+
+</script>

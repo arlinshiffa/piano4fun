@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="../lib/w3.css">
     <link rel="stylesheet" href="../style/style2.css">
     <link rel="stylesheet" href="../lib/font-awesome.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    
+
     <style>
-        .w3-light-blue{
+        .w3-light-blue {
             background-color: rgba(24, 186, 245, 0.2)!important
         }
-        .w3-bar-item{
+
+        .w3-bar-item {
             background-color: rgba(255, 255, 255, 0.295) !important;
         }
-        .container{
+
+        .container {
             padding: 0!important;
         }
     </style>
@@ -129,6 +132,23 @@
             }
         }
         getHighScore();
+
+        $(document).ready(function () {
+            if(getParameterByName("username")!=null&&getParameterByName("username")!=""){
+                $("#username").html(getParameterByName("username"));
+                console.log(getParameterByName("username"))
+            }
+        })
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
     </script>
 
 </body>
